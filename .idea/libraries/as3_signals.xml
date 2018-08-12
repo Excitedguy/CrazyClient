@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="as3-signals" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/as3-signals.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/as3core.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/as3crypto.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/Console.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/GTween-v2.01.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/hamcrest-as3-flex-1.1.3.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/Hi-Res-Stats.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/ionel.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/robotlegs.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/starling.swc!/" />
+      <root url="jar://$PROJECT_DIR$/libs/Swiftsuspenders-v2.0.0rc1.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
