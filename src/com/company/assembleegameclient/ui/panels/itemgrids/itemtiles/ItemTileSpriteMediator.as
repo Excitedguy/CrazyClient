@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTileSpriteMediator
+﻿//com.company.assembleegameclient.ui.panels.itemgrids.itemtiles.ItemTileSpriteMediator
 
 package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 {
@@ -9,22 +6,22 @@ import kabam.rotmg.text.view.BitmapTextFactory;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 
-public class ItemTileSpriteMediator extends Mediator
-{
-
-    [Inject]
-    public var bitmapFactor:BitmapTextFactory;
-    [Inject]
-    public var view:ItemTileSprite;
-
-
-    override public function initialize():void
+public class ItemTileSpriteMediator extends Mediator 
     {
-        this.view.setBitmapFactory(this.bitmapFactor);
-        this.view.drawTile();
+
+        [Inject]
+        public var bitmapFactor:BitmapTextFactory;
+        [Inject]
+        public var view:ItemTileSprite;
+
+
+        override public function initialize():void
+        {
+            this.view.setBitmapFactory(this.bitmapFactor);
+            this.view.drawTile();
+        }
+
+
     }
-
-
-}
 }//package com.company.assembleegameclient.ui.panels.itemgrids.itemtiles
 
