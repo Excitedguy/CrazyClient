@@ -340,7 +340,7 @@ public class Parameters
         setDefault("TradeDelay", true);
         setDefault("lockHighlight", false);
         setDefault("SafeWalk", true);
-        setDefault("InvViewer", true);
+        setDefault("InvViewer", false);
         setDefault("StatsViewer", true);
         setDefault("aimMode", 1);
         setDefault("AAStasis", false);
