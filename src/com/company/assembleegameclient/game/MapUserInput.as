@@ -791,7 +791,6 @@ public class MapUserInput
                 this.togglePerformanceStats();
                 break;
             case Parameters.data_.escapeToNexus:
-            case Parameters.data_.escapeToNexus2:
                 _local_20 = StaticInjectorContext.getInjector().getInstance(CloseAllPopupsSignal);
                 _local_20.dispatch();
                 this.exitGame.dispatch();

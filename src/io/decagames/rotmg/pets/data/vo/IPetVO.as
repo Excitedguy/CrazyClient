@@ -17,7 +17,7 @@ public interface IPetVO
     {
 
         function get updated():Signal;
-        function getSkinBitmap():Bitmap;
+        function getSkinBitmap(_arg_1:Number = 1):Bitmap;
         function getID():int;
         function get name():String;
         function get rarity():PetRarityEnum;

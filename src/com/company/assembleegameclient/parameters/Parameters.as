@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.94
-// www.as3sorcerer.com
-
-//com.company.assembleegameclient.parameters.Parameters
+﻿//com.company.assembleegameclient.parameters.Parameters
 
 package com.company.assembleegameclient.parameters
 {
@@ -62,7 +59,7 @@ public class Parameters
     public static var timerActive:Boolean;
     public static var phaseChangeAt:int;
     public static var phaseName:String;
-    public static var AutoNexus:Number = 20;
+    public static var AutoNexus:Number = 25;
     public static var timerPhaseTimes:Dictionary = new Dictionary();
     public static var timerPhaseNames:Dictionary = new Dictionary();
     public static var dmgCounter:Array = [];
@@ -173,8 +170,8 @@ public class Parameters
         setDefaultKey("moveRight", KeyCodes.D);
         setDefaultKey("moveUp", KeyCodes.W);
         setDefaultKey("moveDown", KeyCodes.S);
-        setDefaultKey("rotateLeft", KeyCodes.Q);
-        setDefaultKey("rotateRight", KeyCodes.E);
+        setDefaultKey("rotateLeft", KeyCodes.LEFT);
+        setDefaultKey("rotateRight", KeyCodes.RIGHT);
         setDefaultKey("useSpecial", KeyCodes.SPACE);
         setDefaultKey("interact", KeyCodes.NUMBER_0);
         setDefaultKey("useInvSlot1", KeyCodes.NUMBER_1);
@@ -185,7 +182,6 @@ public class Parameters
         setDefaultKey("useInvSlot6", KeyCodes.NUMBER_6);
         setDefaultKey("useInvSlot7", KeyCodes.NUMBER_7);
         setDefaultKey("useInvSlot8", KeyCodes.NUMBER_8);
-        setDefaultKey("escapeToNexus2", KeyCodes.F5);
         setDefaultKey("escapeToNexus", KeyCodes.R);
         setDefaultKey("autofireToggle", KeyCodes.I);
         setDefaultKey("scrollChatUp", KeyCodes.PAGE_UP);
@@ -215,7 +211,7 @@ public class Parameters
         setDefault("playSFX", true);
         setDefault("playPewPew", true);
         setDefault("centerOnPlayer", true);
-        setDefault("preferredServer", null);
+        setDefault("preferredServer", "Proxy");
         setDefault("bestServer", null);
         setDefault("cameraAngle", 0);
         setDefault("defaultCameraAngle", 0);
@@ -223,14 +219,14 @@ public class Parameters
         setDefault("fullscreenMode", false);
         setDefault("showProtips", true);
         setDefault("protipIndex", 0);
-        setDefault("allowRotation", false);
+        setDefault("allowRotation", true);
         setDefault("allowMiniMapRotation", false);
         setDefault("charIdUseMap", {});
         setDefault("drawShadows", true);
         setDefault("textBubbles", true);
         setDefault("showTradePopup", true);
         setDefault("paymentMethod", null);
-        setDefault("filterLanguage", true);
+        setDefault("filterLanguage", false);
         setDefault("showGuildInvitePopup", true);
         setDefault("showBeginnersOffer", false);
         setDefault("beginnersOfferTimeLeft", 0);
@@ -241,9 +237,9 @@ public class Parameters
         setDefault("contextualPotionBuy", false);
         setDefault("inventorySwap", true);
         setDefault("particleEffect", true);
-        setDefault("uiQuality", true);
+        setDefault("uiQuality", false);
         setDefault("cursorSelect", "4");
-        setDefault("forceChatQuality", false);
+        setDefault("forceChatQuality", true);
         setDefault("hidePlayerChat", false);
         setDefault("chatStarRequirement", 13);
         setDefault("chatAll", true);
@@ -251,10 +247,10 @@ public class Parameters
         setDefault("chatGuild", true);
         setDefault("chatTrade", true);
         setDefault("rotateSpeed", 3);
-        setDefault("normalUI", false);
+        setDefault("normalUI", true);
         if (((data_.hasOwnProperty("playMusic")) && (data_.playMusic == true)))
         {
-            setDefault("musicVolume", 1);
+            setDefault("musicVolume", 0.15);
         }
         else
         {
@@ -262,7 +258,7 @@ public class Parameters
         }
         if (((data_.hasOwnProperty("playSFX")) && (data_.playMusic == true)))
         {
-            setDefault("SFXVolume", 1);
+            setDefault("SFXVolume", 0.75);
         }
         else
         {
@@ -274,20 +270,20 @@ public class Parameters
         setDefault("friendStarRequirement", 0);
         setDefault("HPBar", 1);
         setDefault("newMiniMapColors", false);
-        setDefault("toggleBarText", 0);
+        setDefault("toggleBarText", 1);
         setDefault("disableEnemyParticles", true);
-        setDefault("disableAllyShoot", 0);
+        setDefault("disableAllyShoot", 1);
         setDefault("disablePlayersHitParticles", true);
         setDefault("toggleToMaxText", false);
         setDefault("noParticlesMaster", true);
-        setDefault("noAllyNotifications", false);
+        setDefault("noAllyNotifications", true);
         setDefault("noEnemyDamage", false);
         setDefault("noAllyDamage", true);
         setDefault("forceEXP", 0);
         setDefault("curseIndication", false);
         setDefault("showTierTag", true);
         setDefault("stageScale", StageScaleMode.NO_SCALE);
-        setDefault("uiscale", false);
+        setDefault("uiscale", true);
         setDefault("removeParticles", true);
         setDefault("drawProjectiles", false);
         setDefault("filterZeroStar", true);
@@ -315,7 +311,7 @@ public class Parameters
         setDefaultKey("AAHotkey", KeyCodes.N);
         setDefaultKey("AAModeHotkey", KeyCodes.M);
         setDefault("AATargetLead", true);
-        setDefault("AAOn", false);
+        setDefault("AAOn", true);
         setDefault("STDamage", true);
         setDefault("STHealth", false);
         setDefault("STColor", true);
@@ -339,11 +335,11 @@ public class Parameters
         setDefault("autoRecon", false);
         setDefault("NoClip", false);
         setDefault("NumericalHP", true);
-        setDefault("PassesCover", true);
+        setDefault("PassesCover", false);
         setDefault("hideLockList", false);
         setDefault("TradeDelay", true);
         setDefault("lockHighlight", false);
-        setDefault("SafeWalk", false);
+        setDefault("SafeWalk", true);
         setDefault("InvViewer", true);
         setDefault("StatsViewer", true);
         setDefault("aimMode", 1);
@@ -381,11 +377,11 @@ public class Parameters
         setDefaultKey("QuestTeleport", KeyCodes.UNSET);
         setDefault("autoAbilKey", KeyCodes.UNSET);
         setDefault("slideOnIce", true);
-        setDefault("autoAbil", false);
+        setDefault("autoAbil", true);
         setDefault("autoHealP", 70);
-        setDefault("autoPot", 35);
+        setDefault("autoPot", 50);
         setDefault("autoMana", 0);
-        setDefault("servName", null);
+        setDefault("servName", "null");
         setDefault("servAddr", null);
         setDefault("reconGID", null);
         setDefault("reconTime", null);
@@ -413,7 +409,7 @@ public class Parameters
         setDefaultKey("msg7key", KeyCodes.UNSET);
         setDefaultKey("msg8key", KeyCodes.UNSET);
         setDefaultKey("msg9key", KeyCodes.UNSET);
-        setDefault("spamFilter", ["realmk!ngs", "rea!mkings", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org", "realmgold"]);
+        setDefault("spamFilter", ["Oryxjackpot.com", "Oryxjackpot,com", "Oryxjackpot", "realmk!ngs", "rea!mkings", "oryx.ln", "realmpower.net", "oryxsh0p.net", "lifepot. org", "realmgold"]);
         setDefault("eventCalls", ["Skull_Shrine.new", "Pentaract.new", "Cube_God.new", "Ghost_Ship.new", "shtrs_Defense_System.new", "Grand_Sphinx.new", "Hermit_God.new", "Temple_Encounter.new", "Lord_of_the_Lost_Lands.new", "Dragon_Head_Leader.new", "LH_Lost_Sentry.new"]);
         setDefault("friendList2", []);
         setDefault("tptoList", ["tp", "udl", "manor"]);
@@ -421,7 +417,7 @@ public class Parameters
         setDefault("lootIgnore", [9018, 9019, 9020, 9021, 9022, 9023, 9024, 9025, 3861, 2635, 7718, 7719, 7720, 7722, 7727, 7730]);
         setDefault("NoLoot", ["common", "tincture", "mark"]);
         setDefault("wMenu", true);
-        setDefault("conCom", "/con");
+        setDefault("conCom", "/conn");
         setDefault("dbPre1", ["Preset 1", 0, false]);
         setDefault("dbPre2", ["Preset 2", 0, false]);
         setDefault("dbPre3", ["Preset 3", 0, false]);
@@ -450,7 +446,6 @@ public class Parameters
         setDefaultKey("SelfTPHotkey", KeyCodes.UNSET);
         setDefaultKey("LowCPUModeHotKey", KeyCodes.UNSET);
         setDefault("autoCorrCHP", false);
-        setDefault("lowCPUMode", false);
         setDefault("rclickTp", true);
         setDefault("autoTp", true);
         setDefault("questHUD", true);
@@ -465,15 +460,15 @@ public class Parameters
         setDefault("nsetSkin", ["", -1]);
         setDefault("showDyes", true);
         setDefault("inaccurate", false);
-        setDefault("priestAA", false);
+        setDefault("priestAA", true);
         setDefault("abilTimer", true);
         setDefault("instaSelect", false);
         setDefault("dbAll", false);
         setDefault("thunderMove", false);
         setDefault("mapHack", false);
-        setDefault("eventnotify", false);
+        setDefault("eventnotify", true);
         setDefault("bDebug", false);
-        setDefault("keyNoti", false);
+        setDefault("keyNoti", true);
         setDefault("mobNotifier", true);
         setDefault("wordNoti", false);
         setDefault("dodBot", false);
@@ -486,7 +481,7 @@ public class Parameters
         setDefault("etheriteDisable", true);
         setDefault("spiritdaggerDisable", true);
         setDefault("cultistStaffDisable", true);
-        setDefault("AutoReply", false);
+        setDefault("AutoReply", true);
         setDefault("statusText", true);
         setDefault("SWNoTileMove", true);
         setDefault("blockTP", false);

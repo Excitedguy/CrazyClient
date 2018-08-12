@@ -525,14 +525,17 @@ public class Player extends Character
             }
         }
 
-        public function autoAbility():void{
-            var _local_1:int = equipment_[1];
-            var _local_2:int = ObjectLibrary.xmlLibrary_[_local_1].MpCost;
-            if (_local_2 > this.mp_ || this.nextAltAttack_ > getTimer() || _local_1 == -1)
+        public function autoAbility():void
+        {
+            var loc1:*=equipment_[1];
+            var loc2:*=ObjectLibrary.xmlLibrary_[loc1].MpCost;
+            if (loc2 > this.mp_ || this.nextAltAttack_ > getTimer() || loc1 == -1)
             {
                 return;
             }
-            switch (this.objectType_){
+            var loc3:*=this.objectType_;
+            switch (loc3)
+            {
                 case 801:
                 case 782:
                 case 803:
@@ -541,10 +544,14 @@ public class Player extends Character
                 case 805:
                 case 798:
                 case 800:
+                {
                     this.targetAA();
                     return;
+                }
                 default:
+                {
                     return;
+                }
             }
         }
 
@@ -1477,10 +1484,11 @@ public class Player extends Character
                     }
                     this.timerCount++;
                 }
-                if ((this == this.map_.player_) && (!this.map_.gs_.isSafeMap) && (Parameters.data_.autoAbil)) {
+                if (this == this.map_.player_ && !this.map_.gs_.isSafeMap && Parameters.data_.autoAbil && !(this.equipment_[1] == -1))
+                {
                     this.autoAbility();
                 }
-                if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer() && (!Parameters.data_.blockAbil)))) {
+                if (this.mapAutoAbil && this.nextAutoAbil <= getTimer() && !Parameters.data_.blockAbil)  {
                     _local_23 = 0;
                     _local_24 = (1 + (this.wisdom_ / 150));
                     switch (equipment_[1]) {

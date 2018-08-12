@@ -83,12 +83,12 @@ public class CurrentCharacterRect extends CharacterRect
         var _local_1:PetVO = this.char.getPetVO();
         if (_local_1)
         {
-            this.petIcon = _local_1.getSkinBitmap();
+            this.petIcon = _local_1.getSkinBitmap(0.7);
             if (this.petIcon == null)
             {
                 return;
             }
-            this.petIcon.x = -3;
+            this.petIcon.x = 170;
             this.petIcon.y = 12;
             selectContainer.addChild(this.petIcon);
         }
