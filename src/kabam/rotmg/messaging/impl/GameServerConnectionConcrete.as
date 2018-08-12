@@ -2754,7 +2754,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             this.statsTracker.setBinaryStringData(_local_5, _arg_1.stats_);
         }
         var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
-        if ((((((((((((!(_arg_1.name_ == "Nexus")) && (!(_arg_1.name_ == "{objects.Pirate_Cave_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.nexus"}'))) && (!(_arg_1.name_ == '{"text":"server.vault"}'))) && (!(_arg_1.name_ == "Pet Yard"))) && (!(_arg_1.name_ == "Guild Hall"))) && (!(_arg_1.name_ == "{objects.Cloth_Bazaar_Portal}"))) && (!(_arg_1.name_ == "Tutorial"))) && (!(_arg_1.name_ == "{objects.Nexus_Explanation_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.vault_explanation"}'))) && (!(_arg_1.name_ == '{"text":"server.enter_the_portal"}'))))
+        if ((((((((((((!(_arg_1.name_ == "Nexus")) && (!(_arg_1.name_ == "{objects.Pirate_Cave_Portal}"))) && (!(_arg_1.name_ == "{\"text\":\"server.nexus\"}"))) && (!(_arg_1.name_ == '{"text":"server.vault"}'))) && (!(_arg_1.name_ == "Pet Yard"))) && (!(_arg_1.name_ == "Guild Hall"))) && (!(_arg_1.name_ == "{objects.Cloth_Bazaar_Portal}"))) && (!(_arg_1.name_ == "Tutorial"))) && (!(_arg_1.name_ == "{objects.Nexus_Explanation_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.vault_explanation"}'))) && (!(_arg_1.name_ == '{"text":"server.enter_the_portal"}'))))
         {
             if (_arg_1.name_.search("NexusPortal.") < 0)
             {

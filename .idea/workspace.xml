@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2ea9548-ec8c-4cf4-8d97-c4e4a0d88d3c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/Crazy Client.swf" afterPath="$PROJECT_DIR$/out/Crazy Client.swf" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/core/Account.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/core/Account.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/ConfirmEmailModal.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/ConfirmEmailModal.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/kabam/KabamAccount.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/kabam/KabamAccount.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/kabam/services/KabamLoadAccountTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/kabam/services/KabamLoadAccountTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/KongregateAccount.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/KongregateAccount.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateGetCredentialsTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateGetCredentialsTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateLoginTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateLoginTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRegisterAccountTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRegisterAccountTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRelayAPILoginTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRelayAPILoginTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/steam/SteamAccount.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/steam/SteamAccount.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamGetCredentialsTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamGetCredentialsTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamRegisterAccountTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamRegisterAccountTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/CheckKabamAccountTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/CheckKabamAccountTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/TransferAccountTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/TransferAccountTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/WebAccount.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/WebAccount.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebChangePasswordTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebChangePasswordTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoadAccountTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoadAccountTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoginTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoginTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebRegisterAccountTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebRegisterAccountTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebChangePasswordMediatorForced.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebChangePasswordMediatorForced.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediatorForced.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediatorForced.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +15,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="GameServerConnectionConcrete.as" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="2747" column="35" lean-forward="false" selection-start-line="2747" selection-start-column="35" selection-end-line="2747" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getItemIcon</find>
       <find>Object</find>
       <find>Pet</find>
       <find>ObjectLibrary</find>
@@ -69,6 +59,7 @@
       <find>extraoptions</find>
       <find>com.company.assembleegameclient.parameters.</find>
       <find>doshoot</find>
+      <find>server.nexus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -82,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/appengine/SavedCharactersList.as" />
         <option value="$PROJECT_DIR$/src/kabam/rotmg/characters/reskin/control/ReskinHandler.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/appengine/RemoteTexture.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/EquipmentToolTip.as" />
@@ -133,6 +123,7 @@
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" />
       </list>
     </option>
   </component>
@@ -146,6 +137,9 @@
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -344,14 +338,16 @@
       <workItem from="1534055133396" duration="765000" />
       <workItem from="1534056205573" duration="42000" />
       <workItem from="1534077287297" duration="1580000" />
+      <workItem from="1534080677859" duration="948000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69120000" />
+    <option name="totallyTimeSpent" value="70068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -361,7 +357,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -714,16 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="2422" column="37" lean-forward="false" selection-start-line="2422" selection-start-column="30" selection-end-line="2422" selection-end-column="37" />
-          <folding>
-            <element signature="e#155#221#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/ui/UIConfig.as">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -735,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="124" column="4330" lean-forward="false" selection-start-line="124" selection-start-column="4323" selection-end-line="124" selection-end-column="4330" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="13" column="138119" lean-forward="false" selection-start-line="13" selection-start-column="138119" selection-end-line="13" selection-end-column="138119" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,7 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="472" column="37" lean-forward="false" selection-start-line="472" selection-start-column="37" selection-end-line="472" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -759,7 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="887" column="107" lean-forward="false" selection-start-line="887" selection-start-column="107" selection-end-line="887" selection-end-column="107" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -767,9 +749,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1173">
           <caret line="2629" column="70" lean-forward="false" selection-start-line="2629" selection-start-column="70" selection-end-line="2629" selection-end-column="70" />
-          <folding>
-            <element signature="e#100#166#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="2747" column="35" lean-forward="false" selection-start-line="2747" selection-start-column="35" selection-end-line="2747" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
