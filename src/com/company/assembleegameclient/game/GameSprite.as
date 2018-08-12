@@ -695,8 +695,8 @@ public class GameSprite extends AGameSprite {
             this.timerCounter.mouseChildren = false;
             this.timerCounter.setBold(true);
             this.timerCounter.filters = [EMPTY_FILTER];
-            this.timerCounter.x = 3;
-            this.timerCounter.y = 80;
+            this.timerCounter.x = 180;
+            this.timerCounter.y = 8;
             addChild(this.timerCounter);
         }
     }
