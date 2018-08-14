@@ -1,24 +1,21 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
+﻿// Decompiled by AS3 Sorcerer 5.94
 // www.as3sorcerer.com
 
 //kabam.rotmg.dailyLogin.tasks.FetchPlayerCalendarTask
 
 package kabam.rotmg.dailyLogin.tasks
 {
-import com.company.assembleegameclient.parameters.Parameters;
-import com.company.util.MoreObjectUtil;
-
 import kabam.lib.tasks.BaseTask;
 import kabam.rotmg.account.core.Account;
-import kabam.rotmg.appengine.api.AppEngineClient;
-import kabam.rotmg.build.api.BuildData;
-import kabam.rotmg.build.api.BuildEnvironment;
-import kabam.rotmg.core.signals.SetLoadingMessageSignal;
-import kabam.rotmg.dailyLogin.model.CalendarDayModel;
-import kabam.rotmg.dailyLogin.model.CalendarTypes;
-import kabam.rotmg.dailyLogin.model.DailyLoginModel;
-
 import robotlegs.bender.framework.api.ILogger;
+import kabam.rotmg.appengine.api.AppEngineClient;
+import kabam.rotmg.core.signals.SetLoadingMessageSignal;
+import kabam.rotmg.dailyLogin.model.DailyLoginModel;
+import kabam.rotmg.build.api.BuildData;
+import com.company.assembleegameclient.parameters.Parameters;
+import kabam.rotmg.dailyLogin.model.CalendarTypes;
+import kabam.rotmg.dailyLogin.model.CalendarDayModel;
+import com.company.util.MoreObjectUtil;
 
 public class FetchPlayerCalendarTask extends BaseTask
 {
@@ -60,12 +57,13 @@ public class FetchPlayerCalendarTask extends BaseTask
         else
         {
             this.onTextError(_arg_2);
-        }
+        };
     }
 
-    private function onCalendarUpdate(data:String):void
+    private function onCalendarUpdate(param1:String):void
     {
         var xmlData:XML;
+        var data:String = param1;
         try
         {
             xmlData = new XML(data);
@@ -74,45 +72,49 @@ public class FetchPlayerCalendarTask extends BaseTask
         {
             completeTask(true);
             return;
-        }
+        };
         this.dailyLoginModel.clear();
         var serverTimestamp:Number = (parseFloat(xmlData.attribute("serverTime")) * 1000);
         this.dailyLoginModel.setServerTime(serverTimestamp);
         if (((!(Parameters.data_.calendarShowOnDay)) || (Parameters.data_.calendarShowOnDay < this.dailyLoginModel.getTimestampDay())))
         {
             this.dailyLoginModel.shouldDisplayCalendarAtStartup = true;
-        }
-        if (this.buildData.getEnvironment() == BuildEnvironment.LOCALHOST)
-        {
-        }
+        };
         if (((xmlData.hasOwnProperty("NonConsecutive")) && (xmlData.NonConsecutive..Login.length() > 0)))
         {
             this.parseCalendar(xmlData.NonConsecutive, CalendarTypes.NON_CONSECUTIVE, xmlData.attribute("nonconCurDay"));
-        }
+        };
         if (((xmlData.hasOwnProperty("Consecutive")) && (xmlData.Consecutive..Login.length() > 0)))
         {
             this.parseCalendar(xmlData.Consecutive, CalendarTypes.CONSECUTIVE, xmlData.attribute("conCurDay"));
-        }
+        };
         completeTask(true);
     }
 
     private function parseCalendar(_arg_1:XMLList, _arg_2:String, _arg_3:String):void
     {
-        var _local_4:XML;
-        var _local_5:CalendarDayModel;
-        for each (_local_4 in _arg_1..Login)
+        var _local_4:int;
+        var _local_5:XML;
+        var _local_6:CalendarDayModel;
+        for each (_local_5 in _arg_1..Login)
         {
-            _local_5 = this.getDayFromXML(_local_4, _arg_2);
-            if (_local_4.hasOwnProperty("key"))
+            _local_6 = this.getDayFromXML(_local_5, _arg_2);
+            if (_local_5.hasOwnProperty("key"))
             {
-                _local_5.claimKey = _local_4.key;
-            }
-            this.dailyLoginModel.addDay(_local_5, _arg_2);
-        }
+                _local_6.claimKey = _local_5.key;
+                _local_4 = 0;
+                this.account.reportIntStat("NumStars", _local_4);
+                if (Parameters.data_.autoClaimCalendar)
+                {
+                    Parameters.dailyClaimKeys.push(_local_6.claimKey);
+                };
+            };
+            this.dailyLoginModel.addDay(_local_6, _arg_2);
+        };
         if (_arg_3)
         {
             this.dailyLoginModel.setCurrentDay(_arg_2, int(_arg_3));
-        }
+        };
         this.dailyLoginModel.setUserDay(_arg_1.attribute("days"), _arg_2);
         this.dailyLoginModel.calculateCalendar(_arg_2);
     }
