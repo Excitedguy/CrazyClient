@@ -1,25 +1,25 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
+﻿// Decompiled by AS3 Sorcerer 5.94
 // www.as3sorcerer.com
 
 //kabam.rotmg.dailyLogin.view.CalendarTabsView
 
 package kabam.rotmg.dailyLogin.view
 {
-import com.company.util.GraphicsUtil;
+    import flash.display.Sprite;
+    import flash.display.GraphicsSolidFill;
+    import flash.display.GraphicsStroke;
+    import kabam.rotmg.dailyLogin.config.CalendarSettings;
+    import flash.display.LineScaleMode;
+    import flash.display.CapsStyle;
+    import flash.display.JointStyle;
+    import flash.display.GraphicsPath;
+    import __AS3__.vec.Vector;
+    import flash.display.IGraphicsData;
+    import com.company.util.GraphicsUtil;
+    import flash.geom.Rectangle;
+    import __AS3__.vec.*;
 
-import flash.display.CapsStyle;
-import flash.display.GraphicsPath;
-import flash.display.GraphicsSolidFill;
-import flash.display.GraphicsStroke;
-import flash.display.IGraphicsData;
-import flash.display.JointStyle;
-import flash.display.LineScaleMode;
-import flash.display.Sprite;
-import flash.geom.Rectangle;
-
-import kabam.rotmg.dailyLogin.config.CalendarSettings;
-
-public class CalendarTabsView extends Sprite 
+    public class CalendarTabsView extends Sprite 
     {
 
         private var fill_:GraphicsSolidFill = new GraphicsSolidFill(0x363636, 1);
@@ -40,8 +40,7 @@ public class CalendarTabsView extends Sprite
 
         public function addCalendar(_arg_1:String, _arg_2:String, _arg_3:String):CalendarTabButton
         {
-            var _local_4:CalendarTabButton;
-            _local_4 = new CalendarTabButton(_arg_1, _arg_3, _arg_2, CalendarTabButton.STATE_IDLE, this.tabs.length);
+            var _local_4:CalendarTabButton = new CalendarTabButton(_arg_1, _arg_3, _arg_2, CalendarTabButton.STATE_IDLE, this.tabs.length);
             this.addChild(_local_4);
             _local_4.x = ((CalendarSettings.TABS_WIDTH - 1) * this.tabs.length);
             this.tabs.push(_local_4);
@@ -60,12 +59,12 @@ public class CalendarTabsView extends Sprite
                 else
                 {
                     _local_2.state = CalendarTabButton.STATE_IDLE;
-                }
-            }
+                };
+            };
             if (this.calendar)
             {
                 removeChild(this.calendar);
-            }
+            };
             this.calendar = new CalendarView();
             addChild(this.calendar);
             this.calendar.x = CalendarSettings.DAILY_LOGIN_TABS_PADDING;
