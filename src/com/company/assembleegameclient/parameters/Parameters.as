@@ -14,7 +14,7 @@ public class Parameters
 {
 
     public static const BUILD_VERSION:String = "X28.0";
-    public static const MINOR_VERSION:String = "3";
+    public static const MINOR_VERSION:String = "4";
     public static const ENABLE_ENCRYPTION:Boolean = true;
     public static const PORT:int = 2050;
     public static const ALLOW_SCREENSHOT_MODE:Boolean = true;
@@ -340,7 +340,7 @@ public class Parameters
         setDefault("TradeDelay", true);
         setDefault("lockHighlight", false);
         setDefault("SafeWalk", true);
-        setDefault("InvViewer", false);
+        setDefault("InvViewer", true);
         setDefault("StatsViewer", true);
         setDefault("aimMode", 1);
         setDefault("AAStasis", false);
