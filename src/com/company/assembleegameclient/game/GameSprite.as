@@ -294,23 +294,37 @@ public class GameSprite extends AGameSprite {
         }
     }
 
-    public function positionDynamicDisplays():void {
-        var _local_1:NewsModel = StaticInjectorContext.getInjector().getInstance(NewsModel);
+    public function positionDynamicDisplays():void
+    {
+        var _local_3:NewsModel = StaticInjectorContext.getInjector().getInstance(NewsModel);
+        var _local_1:int = 66;
         var _local_2:int = 66;
-        if (((this.giftStatusDisplay) && (this.giftStatusDisplay.isOpen))) {
+        if (((this.giftStatusDisplay) && (this.giftStatusDisplay.isOpen)))
+        {
             this.giftStatusDisplay.y = _local_2;
-            _local_2 = (_local_2 + DISPLAY_AREA_Y_SPACE);
-        }
-        if (((this.newsModalButton) && (((NewsModalButton.showsHasUpdate) || (_local_1.hasValidModalNews()))))) {
+            _local_2 = 98;
+        };
+        if (((this.newsModalButton) && ((NewsModalButton.showsHasUpdate) || (_local_3.hasValidModalNews()))))
+        {
             this.newsModalButton.y = _local_2;
-            _local_2 = (_local_2 + DISPLAY_AREA_Y_SPACE);
-        }
-        if (((this.specialOfferButton) && (this.specialOfferButton.isSpecialOfferAvailable))) {
-            this.specialOfferButton.y = _local_2;
-        }
-        if (((this.newsTicker) && (this.newsTicker.visible))) {
+            if (_local_2 == 98)
+            {
+                _local_2 = 130;
+            };
+        };
+        if (((this.newsTicker) && (this.newsTicker.visible)))
+        {
             this.newsTicker.y = _local_2;
-        }
+            if (_local_2 == 98)
+            {
+                _local_2 = 130;
+            };
+        };
+        if (((this.specialOfferButton) && (this.specialOfferButton.isSpecialOfferAvailable)))
+        {
+            this.specialOfferButton.y = _local_2;
+        };
+        this.onScreenResize(null);
     }
 
     private function showTimer():void {
@@ -326,7 +340,8 @@ public class GameSprite extends AGameSprite {
         addChild(this.arenaWaveCounter);
     }
 
-    private function showNewsTicker():void {
+    private function showNewsTicker():void
+    {
         this.newsTicker = new NewsTicker();
         this.newsTicker.x = (300 - (this.newsTicker.width / 2));
         addChild(this.newsTicker);
@@ -347,27 +362,25 @@ public class GameSprite extends AGameSprite {
         addChild(this.shopDisplay);
     }
 
-    private function showNewsUpdate(_arg_1:Boolean = true):void {
-        var _local_4:NewsModalButton;
-        var _local_2:ILogger = StaticInjectorContext.getInjector().getInstance(ILogger);
+    private function showNewsUpdate(_arg_1:Boolean=true):void
+    {
+        var _local_2:NewsModalButton;
         var _local_3:NewsModel = StaticInjectorContext.getInjector().getInstance(NewsModel);
-        _local_2.debug("NEWS UPDATE -- making button");
-        if (_local_3.hasValidModalNews()) {
-            _local_2.debug("NEWS UPDATE -- making button - ok");
-            _local_4 = new NewsModalButton();
-            if (this.newsModalButton != null) {
-                removeChild(this.newsModalButton);
-            }
-            _local_4.x = 6;
-            this.newsModalButton = _local_4;
+        if (_local_3.hasValidModalNews())
+        {
+            _local_2 = new NewsModalButton();
+            if (this.newsModalButton)
+            {
+                return;
+            };
+            this.newsModalButton = _local_2;
             addChild(this.newsModalButton);
-            this.positionDynamicDisplays();
-        }
+            stage.dispatchEvent(new Event("resize"));
+        };
     }
 
-    public function refreshNewsUpdateButton():void {
-        var _local_1:ILogger = StaticInjectorContext.getInjector().getInstance(ILogger);
-        _local_1.debug("NEWS UPDATE -- refreshing button, update noticed");
+    public function refreshNewsUpdateButton():void
+    {
         this.showNewsUpdate(false);
     }
 
@@ -510,7 +523,31 @@ public class GameSprite extends AGameSprite {
                 this.newsModalButton.scaleY = _local_4;
             }
             this.newsModalButton.x = (6 * this.newsModalButton.scaleX);
-            this.newsModalButton.y = (34 * this.newsModalButton.scaleY);
+            this.newsModalButton.y = (90 * this.newsModalButton.scaleY);
+        }
+        if (this.giftStatusDisplay != null) {
+            if (_local_2) {
+                this.giftStatusDisplay.scaleX = _local_5;
+                this.giftStatusDisplay.scaleY = 1;
+            }
+            else {
+                this.giftStatusDisplay.scaleX = _local_3;
+                this.giftStatusDisplay.scaleY = _local_4;
+            }
+            this.giftStatusDisplay.x = (6 * this.giftStatusDisplay.scaleX);
+            this.giftStatusDisplay.y = (62 * this.giftStatusDisplay.scaleY);
+        }
+        if (this.shopDisplay != null) {
+            if (_local_2) {
+                this.shopDisplay.scaleX = _local_5;
+                this.shopDisplay.scaleY = 1;
+            }
+            else {
+                this.shopDisplay.scaleX = _local_3;
+                this.shopDisplay.scaleY = _local_4;
+            }
+            this.shopDisplay.x = (6 * this.shopDisplay.scaleX);
+            this.shopDisplay.y = (34 * this.shopDisplay.scaleY);
         }
         if (this.guildText_ != null) {
             if (_local_2) {
@@ -695,8 +732,8 @@ public class GameSprite extends AGameSprite {
             this.timerCounter.mouseChildren = false;
             this.timerCounter.setBold(true);
             this.timerCounter.filters = [EMPTY_FILTER];
-            this.timerCounter.x = 180;
-            this.timerCounter.y = 8;
+            this.timerCounter.x = 3;
+            this.timerCounter.y = 90;
             addChild(this.timerCounter);
         }
     }

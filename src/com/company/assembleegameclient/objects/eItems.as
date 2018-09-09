@@ -23,6 +23,7 @@ package com.company.assembleegameclient.objects
         public static const Tome_of_Renewing:int = 2611;
         public static const Tome_of_Divine_Favor:int = 2651;
         public static const Tome_of_Holy_Guidance:int = 2853;
+        public static const Tome_of_Pain:int = 1976;
         public static const Nativity_Tome:int = 8342;
         public static const pD_Tome:int = 1976;
         public static const Tome_of_Holy_Protection:int = 3102;

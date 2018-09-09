@@ -13,8 +13,8 @@ import flash.display.StageScaleMode;
 public class Parameters
 {
 
-    public static const BUILD_VERSION:String = "X28.0";
-    public static const MINOR_VERSION:String = "3";
+    public static const BUILD_VERSION:String = "X28.1";
+    public static const MINOR_VERSION:String = "0";
     public static const ENABLE_ENCRYPTION:Boolean = true;
     public static const PORT:int = 2050;
     public static const ALLOW_SCREENSHOT_MODE:Boolean = true;
@@ -53,7 +53,7 @@ public class Parameters
     public static const USER_GENERATED_CONTENT_TERMS:String = "";
     public static const RSA_PUBLIC_KEY:String = ((((("-----BEGIN PUBLIC KEY-----\n" + "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCKFctVrhfF3m2Kes0FBL/JFeO") + "cmNg9eJz8k/hQy1kadD+XFUpluRqa//Uxp2s9W2qE0EoUCu59ugcf/p7lGuL99Uo") + "SGmQEynkBvZct+/M40L0E0rZ4BVgzLOJmIbXMp0J4PnPcb6VLZvxazGcmSfjauC7") + "F3yWYqUbZd/HCBtawwIDAQAB\n") + "-----END PUBLIC KEY-----");
     private static var savedOptions_:SharedObject = null;
-    public static const skinTypes16:Vector.<int> = new <int>[1027, 0x0404, 1029, 1030, 10973, 19494, 19531, 6346];
+    public static const skinTypes16:Vector.<int> = new <int>[1027, 0x0404, 1029, 1030, 10973, 19494, 19531, 6346, 30056];
     public static const itemTypes16:Vector.<int> = new <int>[5473, 5474, 5475, 5476, 10939, 19494, 19531, 6347];
     private static var keyNames_:Dictionary = new Dictionary();
     public static var timerActive:Boolean;
@@ -340,7 +340,7 @@ public class Parameters
         setDefault("TradeDelay", true);
         setDefault("lockHighlight", false);
         setDefault("SafeWalk", true);
-        setDefault("InvViewer", false);
+        setDefault("InvViewer", true);
         setDefault("StatsViewer", true);
         setDefault("aimMode", 1);
         setDefault("AAStasis", false);

@@ -2345,10 +2345,16 @@
    </Object>
    <Object type="0x192a" id="Wakizashi Pink">
       <Class>Projectile</Class>
-      <Texture>
-         <File>d3LofiObjEmbed</File>
-         <Index>0x13f</Index>
-      </Texture>
+      <RandomTexture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xaf</Index>
+         </Texture>
+         <Texture>
+            <File>d2LofiObjEmbed</File>
+            <Index>0xbe</Index>
+         </Texture>
+      </RandomTexture>
       <AngleCorrection>1</AngleCorrection>
    </Object>
    <Object type="0x20be" id="Katana Akuma Slash">
@@ -2363,7 +2369,7 @@
       <Class>Projectile</Class>
       <Texture>
          <File>d2LofiObjEmbed</File>
-         <Index>0xaf</Index>
+         <Index>0xae</Index>
       </Texture>
       <AngleCorrection>1</AngleCorrection>
    </Object>

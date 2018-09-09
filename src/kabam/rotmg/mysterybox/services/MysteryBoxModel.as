@@ -6,6 +6,7 @@
 package kabam.rotmg.mysterybox.services
 {
 import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
+import org.osflash.signals.*;
 
 public class MysteryBoxModel
     {
@@ -14,6 +15,7 @@ public class MysteryBoxModel
         private var initialized:Boolean = false;
         private var _isNew:Boolean = false;
         private var maxSlots:int = 18;
+        public const updateSignal:org.osflash.signals.Signal=new org.osflash.signals.Signal();
 
 
         public function getBoxesOrderByWeight():Object
@@ -35,6 +37,22 @@ public class MysteryBoxModel
             return (_local_1);
         }
 
+        public function getBoxById(arg1:String):kabam.rotmg.mysterybox.model.MysteryBoxInfo
+        {
+            var loc1:*=null;
+            var loc2:*=0;
+            var loc3:*=this.models;
+            for each (loc1 in loc3)
+            {
+                if (loc1.id != arg1)
+                {
+                    continue;
+                }
+                return loc1;
+            }
+            return null;
+        }
+
         public function setMysetryBoxes(_arg_1:Array):void
         {
             var _local_2:MysteryBoxInfo;
@@ -43,6 +61,7 @@ public class MysteryBoxModel
             {
                 this.models[_local_2.id] = _local_2;
             }
+            this.updateSignal.dispatch();
             this.initialized = true;
         }
 

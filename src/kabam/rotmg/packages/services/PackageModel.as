@@ -16,7 +16,8 @@ public class PackageModel
         public var dataChanged:Signal = new Signal();
         private var models:Object;
         private var initialized:Boolean;
-        private var maxSlots:int = 4;
+        private var maxSlots:int = 18;
+        public const updateSignal:org.osflash.signals.Signal=new org.osflash.signals.Signal();
 
 
         public function getBoxesForGrid():Vector.<PackageInfo>
@@ -69,8 +70,8 @@ public class PackageModel
             {
                 this.models[_local_2.id] = _local_2;
             }
+            this.updateSignal.dispatch();
             this.initialized = true;
-            this.dataChanged.dispatch();
         }
 
         private function onDataChanged():void
@@ -87,6 +88,12 @@ public class PackageModel
         public function getPriorityPackage():PackageInfo
         {
             return (null);
+        }
+
+        public function setInitialized(arg1:Boolean):void
+        {
+            this.initialized = arg1;
+            return;
         }
 
         public function hasPackages():Boolean

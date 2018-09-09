@@ -1530,10 +1530,10 @@
       <NoMiniMap/>
       <MaxHitPoints>100</MaxHitPoints>
       <Exp>0</Exp>
-      <Size>120</Size>
-      <Texture>
-         <File>lofiObj5new</File>
-         <Index>0x1d</Index>
-      </Texture>
+      <Size>160</Size>
+      <AnimatedTexture>
+         <File>playerskins16</File>
+         <Index>13</Index>
+      </AnimatedTexture>
    </Object>
 </Objects>

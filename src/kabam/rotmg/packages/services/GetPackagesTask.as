@@ -1,14 +1,9 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//kabam.rotmg.packages.services.GetPackagesTask
+﻿//kabam.rotmg.packages.services.GetPackagesTask
 
 package kabam.rotmg.packages.services
 {
 import com.company.assembleegameclient.util.TimeUtil;
 
-import flash.events.TimerEvent;
-import flash.utils.Timer;
 
 import kabam.lib.tasks.BaseTask;
 import kabam.rotmg.account.core.Account;
@@ -18,12 +13,9 @@ import kabam.rotmg.packages.model.PackageInfo;
 
 import robotlegs.bender.framework.api.ILogger;
 
-public class GetPackagesTask extends BaseTask 
+public class GetPackagesTask extends BaseTask
     {
 
-        private static const HOUR:int = ((1000 * 60) * 60);//3600000
-
-        public var timer:Timer = new Timer(HOUR);
         [Inject]
         public var client:AppEngineClient;
         [Inject]
@@ -34,12 +26,15 @@ public class GetPackagesTask extends BaseTask
         public var logger:ILogger;
         [Inject]
         public var languageModel:LanguageModel;
+        [Inject]
+        internal static var version:String="0";
 
 
         override protected function startTask():void
         {
             var _local_1:Object = this.account.getCredentials();
             _local_1.language = this.languageModel.getLanguage();
+            _local_1.version = version;
             this.client.sendRequest("/package/getPackages", _local_1);
             this.client.complete.addOnce(this.onComplete);
         }
@@ -55,23 +50,45 @@ public class GetPackagesTask extends BaseTask
                 this.logger.warn("GetPackageTask.onComplete: Request failed.");
                 completeTask(true);
             }
+            reset();
+            return;
         }
 
-        private function handleOkay(_arg_1:*):void
+        internal function handleOkay(arg1:*):void
         {
-            if (this.hasNoPackage(_arg_1))
+            version = XML(arg1).attribute("version").toString();
+            var loc1:*=XML(arg1).child("Package");
+            var loc2:*=XML(arg1).child("SoldCounter");
+            if (loc2.length() > 0)
             {
-                this.logger.info("GetPackageTask.onComplete: No package available, retrying in 1 hour.");
-                this.timer.addEventListener(TimerEvent.TIMER, this.timer_timerHandler);
-                this.timer.start();
-                this.packageModel.setPackages([]);
+                this.updateSoldCounters(loc2);
             }
-            else
+            if (loc1.length() > 0)
             {
-                this.parse(XML(_arg_1).child("Package"));
+                this.parse(loc1);
+            }
+            else if (this.packageModel.getInitialized())
+            {
+                this.packageModel.updateSignal.dispatch();
             }
             completeTask(true);
+            return;
         }
+
+        internal function updateSoldCounters(arg1:XMLList):void
+        {
+            var loc1:*=null;
+            var loc2:*=null;
+            var loc3:*=0;
+            var loc4:*=arg1;
+            for each (loc1 in loc4)
+            {
+                loc2 = this.packageModel.getPackageById(loc1.attribute("id").toString());
+                loc2.unitsLeft = loc1.attribute("left");
+            }
+            return;
+        }
+
 
         private function hasNoPackage(_arg_1:*):Boolean
         {
@@ -138,27 +155,8 @@ public class GetPackagesTask extends BaseTask
             this.packageModel.setPackages(_local_2);
         }
 
-        private function getNumPurchased(packagesXML:XML, packageID:int):int
         {
-            var packageHistory:XMLList;
-            var numPurchased:int;
-            var history:XMLList = packagesXML.History;
-            if (history)
-            {
-                packageHistory = history.Package.(@id == packageID);
-                if (packageHistory)
-                {
-                    numPurchased = int(packageHistory.Count);
-                }
-            }
-            return (numPurchased);
-        }
-
-        private function timer_timerHandler(_arg_1:TimerEvent):void
-        {
-            this.timer.removeEventListener(TimerEvent.TIMER, this.timer_timerHandler);
-            this.timer.stop();
-            this.startTask();
+            version = "0";
         }
 
 

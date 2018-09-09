@@ -563,6 +563,7 @@ public class TextKey
     public static const CONDITIONEFFECT_DEAD:String = "conditionEffect.Dead";
     public static const CONDITIONEFFECT_QUIET:String = "conditionEffect.Quiet";
     public static const CONDITIONEFFECT_WEAK:String = "conditionEffect.Weak";
+    public static const CONDITIONEFFECT_SILENCED:String = "conditionEffect.Silenced";
     public static const CONDITIONEFFECT_SICK:String = "conditionEffect.Sick";
     public static const CONDITIONEFFECT_STUNNED:String = "conditionEffect.Stunned";
     public static const CONDITIONEFFECT_BLIND:String = "conditionEffect.Blind";

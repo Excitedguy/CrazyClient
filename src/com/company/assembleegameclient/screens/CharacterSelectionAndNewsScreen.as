@@ -20,7 +20,6 @@ import flash.text.TextFieldAutoSize;
 import kabam.rotmg.core.model.PlayerModel;
 import kabam.rotmg.game.view.CreditDisplay;
 import kabam.rotmg.news.view.NewsView;
-import kabam.rotmg.packages.view.PackageButton;
 import kabam.rotmg.promotions.view.BeginnersPackageButton;
 import kabam.rotmg.text.model.TextKey;
 import kabam.rotmg.text.view.TextFieldDisplayConcrete;
@@ -63,7 +62,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite
         private var characterListHeight:Number;
         private var lines:Shape;
         private var scrollBar:Scrollbar;
-        private var packageButton:PackageButton;
         private var playButton:TitleMenuOption = ButtonFactory.getPlayButton();
         private var classesButton:TitleMenuOption = ButtonFactory.getClassesButton();
         private var backButton:TitleMenuOption = ButtonFactory.getMainButton();
@@ -355,16 +353,6 @@ public class CharacterSelectionAndNewsScreen extends Sprite
             {
                 this.characterList.setPos((-(this.scrollBar.pos()) * (this.characterListHeight - 400)));
             }
-        }
-
-        public function showPackageButton():void
-        {
-            this.packageButton = new PackageButton();
-            this.packageButton.init();
-            this.packageButton.x = 6;
-            this.packageButton.y = 40;
-            addChild(this.packageButton);
-            this.removeIfAble(this.beginnersPackageButton);
         }
 
         private function removeIfAble(_arg_1:DisplayObject):void

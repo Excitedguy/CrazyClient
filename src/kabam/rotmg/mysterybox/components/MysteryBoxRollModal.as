@@ -395,135 +395,115 @@ public class MysteryBoxRollModal extends Sprite
             }
         }
 
-        private function onComplete(_arg_1:Boolean, _arg_2:*):void
+        internal function onComplete(arg1:Boolean, arg2:*):void
         {
-            var _local_3:XML;
-            var _local_4:XML;
-            var _local_5:Player;
-            var _local_6:PlayerModel;
-            var _local_7:OpenDialogSignal;
-            var _local_8:String;
-            var _local_9:Dialog;
-            var _local_10:Injector;
-            var _local_11:GetMysteryBoxesTask;
-            var _local_12:Array;
-            var _local_13:int;
-            var _local_14:Array;
-            var _local_15:int;
-            var _local_16:Array;
+            var loc1:*=null;
+            var loc2:*=null;
+            var loc3:*=null;
+            var loc4:*=null;
+            var loc5:*=null;
+            var loc6:*=null;
+            var loc7:*=null;
+            var loc8:*=null;
+            var loc9:*=null;
+            var loc10:*=null;
+            var loc11:*=0;
+            var loc12:*=null;
+            var loc13:*=0;
+            var loc14:*=null;
             this.requestComplete = true;
-            if (_arg_1)
+            if (arg1)
             {
-                _local_3 = new XML(_arg_2);
-                for each (_local_4 in _local_3.elements("Awards"))
+                loc1 = new XML(arg2);
+                var loc15:*=0;
+                var loc16:*=loc1.elements("Awards");
+                for each (loc2 in loc16)
                 {
-                    this.rewardsList.push(_local_4.toString());
+                    this.rewardsList.push(loc2.toString());
                 }
                 this.lastReward = this.rewardsList[0];
                 if (this.timerComplete)
                 {
                     this.showReward();
                 }
-                if (((_local_3.hasOwnProperty("Left")) && (!(this.mbi.unitsLeft == -1))))
+                if (loc1.hasOwnProperty("Left") && !(this.mbi.unitsLeft == -1))
                 {
-                    this.mbi.unitsLeft = int(_local_3.Left);
+                    this.mbi.unitsLeft = int(loc1.Left);
                 }
-                _local_5 = StaticInjectorContext.getInjector().getInstance(GameModel).player;
-                if (_local_5 != null)
+                if ((loc3 = kabam.rotmg.core.StaticInjectorContext.getInjector().getInstance(kabam.rotmg.game.model.GameModel).player) == null)
                 {
-                    if (_local_3.hasOwnProperty("Gold"))
+                    if ((loc4 = kabam.rotmg.core.StaticInjectorContext.getInjector().getInstance(kabam.rotmg.core.model.PlayerModel)) != null)
                     {
-                        _local_5.setCredits(int(_local_3.Gold));
-                    }
-                    else
-                    {
-                        if (_local_3.hasOwnProperty("Fame"))
+                        if (loc1.hasOwnProperty("Gold"))
                         {
-                            _local_5.fame_ = _local_3.Fame;
+                            loc4.setCredits(int(loc1.Gold));
+                        }
+                        else if (loc1.hasOwnProperty("Fame"))
+                        {
+                            loc4.setFame(int(loc1.Fame));
                         }
                     }
                 }
-                else
+                else if (loc1.hasOwnProperty("Gold"))
                 {
-                    _local_6 = StaticInjectorContext.getInjector().getInstance(PlayerModel);
-                    if (_local_6 != null)
-                    {
-                        if (_local_3.hasOwnProperty("Gold"))
-                        {
-                            _local_6.setCredits(int(_local_3.Gold));
-                        }
-                        else
-                        {
-                            if (_local_3.hasOwnProperty("Fame"))
-                            {
-                                _local_6.setFame(int(_local_3.Fame));
-                            }
-                        }
-                    }
+                    loc3.setCredits(int(loc1.Gold));
+                }
+                else if (loc1.hasOwnProperty("Fame"))
+                {
+                    loc3.fame_ = loc1.Fame;
                 }
             }
             else
             {
-                this.totalRollTimer.removeEventListener(TimerEvent.TIMER, this.onTotalRollTimeComplete);
+                this.totalRollTimer.removeEventListener(flash.events.TimerEvent.TIMER, this.onTotalRollTimeComplete);
                 this.totalRollTimer.stop();
-                _local_7 = StaticInjectorContext.getInjector().getInstance(OpenDialogSignal);
-                _local_8 = "MysteryBoxRollModal.pleaseTryAgainString";
-                if (LineBuilder.getLocalizedStringFromKey(_arg_2) != "")
+                loc5 = kabam.rotmg.core.StaticInjectorContext.getInjector().getInstance(kabam.rotmg.dialogs.control.OpenDialogSignal);
+                loc6 = "MysteryBoxRollModal.pleaseTryAgainString";
+                if (kabam.rotmg.text.view.stringBuilder.LineBuilder.getLocalizedStringFromKey(arg2) != "")
                 {
-                    _local_8 = _arg_2;
+                    loc6 = arg2;
                 }
-                if (_arg_2.indexOf("MysteryBoxError.soldOut") >= 0)
+                if (arg2.indexOf("MysteryBoxError.soldOut") >= 0)
                 {
-                    _local_12 = _arg_2.split("|");
-                    if (_local_12.length == 2)
+                    if ((loc10 = arg2.split("|")).length == 2)
                     {
-                        _local_13 = _local_12[1];
-                        if (_local_13 == 0)
+                        if ((loc11 = loc10[1]) != 0)
                         {
-                            _local_8 = "MysteryBoxError.soldOutAll";
+                            loc6 = kabam.rotmg.text.view.stringBuilder.LineBuilder.getLocalizedStringFromKey("MysteryBoxError.soldOutLeft", {"left":this.mbi.unitsLeft, "box":this.mbi.unitsLeft != 1 ? kabam.rotmg.text.view.stringBuilder.LineBuilder.getLocalizedStringFromKey("MysteryBoxError.boxes") : kabam.rotmg.text.view.stringBuilder.LineBuilder.getLocalizedStringFromKey("MysteryBoxError.box")});
                         }
                         else
                         {
-                            _local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.soldOutLeft", {
-                                "left":this.mbi.unitsLeft,
-                                "box":((this.mbi.unitsLeft == 1) ? LineBuilder.getLocalizedStringFromKey("MysteryBoxError.box") : LineBuilder.getLocalizedStringFromKey("MysteryBoxError.boxes"))
-                            });
+                            loc6 = "MysteryBoxError.soldOutAll";
                         }
                     }
                 }
-                if (_arg_2.indexOf("MysteryBoxError.maxPurchase") >= 0)
+                if (arg2.indexOf("MysteryBoxError.maxPurchase") >= 0)
                 {
-                    _local_14 = _arg_2.split("|");
-                    if (_local_14.length == 2)
+                    if ((loc12 = arg2.split("|")).length == 2)
                     {
-                        _local_15 = _local_14[1];
-                        if (_local_15 == 0)
+                        if ((loc13 = loc12[1]) != 0)
                         {
-                            _local_8 = "MysteryBoxError.maxPurchase";
+                            loc6 = kabam.rotmg.text.view.stringBuilder.LineBuilder.getLocalizedStringFromKey("MysteryBoxError.maxPurchaseLeft", {"left":loc13});
                         }
                         else
                         {
-                            _local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.maxPurchaseLeft", {"left":_local_15});
+                            loc6 = "MysteryBoxError.maxPurchase";
                         }
                     }
                 }
-                if (_arg_2.indexOf("blockedForUser") >= 0)
+                if (arg2.indexOf("blockedForUser") >= 0)
                 {
-                    _local_16 = _arg_2.split("|");
-                    if (_local_16.length == 2)
+                    if ((loc14 = arg2.split("|")).length == 2)
                     {
-                        _local_8 = LineBuilder.getLocalizedStringFromKey("MysteryBoxError.blockedForUser", {"date":_local_16[1]});
+                        loc6 = kabam.rotmg.text.view.stringBuilder.LineBuilder.getLocalizedStringFromKey("MysteryBoxError.blockedForUser", {"date":loc14[1]});
                     }
                 }
-                _local_9 = new Dialog("MysteryBoxRollModal.purchaseFailedString", _local_8, "MysteryBoxRollModal.okString", null, null);
-                _local_9.addEventListener(Dialog.LEFT_BUTTON, this.onErrorOk);
-                _local_7.dispatch(_local_9);
-                _local_10 = StaticInjectorContext.getInjector();
-                _local_11 = _local_10.getInstance(GetMysteryBoxesTask);
-                _local_11.clearLastRanBlock();
-                _local_11.start();
+                (loc7 = new com.company.assembleegameclient.ui.dialogs.Dialog("MysteryBoxRollModal.purchaseFailedString", loc6, "MysteryBoxRollModal.okString", null, null)).addEventListener(com.company.assembleegameclient.ui.dialogs.Dialog.LEFT_BUTTON, this.onErrorOk);
+                loc5.dispatch(loc7);
+                (loc9 = (loc8 = kabam.rotmg.core.StaticInjectorContext.getInjector()).getInstance(kabam.rotmg.mysterybox.services.GetMysteryBoxesTask)).start();
                 this.close(true);
             }
+            return;
         }
 
         private function onErrorOk(_arg_1:Event):void

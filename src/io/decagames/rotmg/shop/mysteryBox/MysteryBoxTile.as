@@ -1,171 +1,173 @@
-﻿// Decompiled by AS3 Sorcerer 5.48
-// www.as3sorcerer.com
-
-//io.decagames.rotmg.shop.mysteryBox.MysteryBoxTile
-
-package io.decagames.rotmg.shop.mysteryBox
+﻿package io.decagames.rotmg.shop.mysteryBox
 {
-import flash.geom.Point;
+import flash.geom.*;
+import io.decagames.rotmg.shop.genericBox.*;
+import io.decagames.rotmg.shop.mysteryBox.contentPopup.*;
+import io.decagames.rotmg.ui.gird.*;
+import kabam.rotmg.mysterybox.model.*;
 
-import io.decagames.rotmg.shop.genericBox.GenericBoxTile;
-import io.decagames.rotmg.shop.mysteryBox.contentPopup.UIItemContainer;
-import io.decagames.rotmg.ui.gird.UIGrid;
-
-import kabam.rotmg.mysterybox.model.MysteryBoxInfo;
-
-public class MysteryBoxTile extends GenericBoxTile
+public class MysteryBoxTile extends io.decagames.rotmg.shop.genericBox.GenericBoxTile
+{
+    public function MysteryBoxTile(arg1:kabam.rotmg.mysterybox.model.MysteryBoxInfo)
     {
+        buyButtonBitmapBackground = "shop_box_button_background";
+        super(arg1);
+        return;
+    }
 
-        private var displayedItemsGrid:UIGrid;
-        private var maxResultHeight:int = 75;
-        private var maxResultWidth:int;
-        private var resultElementWidth:int;
-        private var gridConfig:Point;
+    internal function prepareResultGrid(arg1:int):void
+    {
+        this.maxResultWidth = 160;
+        this.gridConfig = this.calculateGrid(arg1);
+        this.resultElementWidth = this.calculateElementSize(this.gridConfig);
+        this.displayedItemsGrid = new io.decagames.rotmg.ui.gird.UIGrid(this.resultElementWidth * this.gridConfig.x, this.gridConfig.x, 0);
+        this.displayedItemsGrid.x = 20 + Math.round((this.maxResultWidth - this.resultElementWidth * this.gridConfig.x) / 2);
+        this.displayedItemsGrid.y = Math.round(42 + (this.maxResultHeight - this.resultElementWidth * this.gridConfig.y) / 2);
+        this.displayedItemsGrid.centerLastRow = true;
+        addChild(this.displayedItemsGrid);
+        return;
+    }
 
-        public function MysteryBoxTile(_arg_1:MysteryBoxInfo)
+    internal function calculateGrid(arg1:int):flash.geom.Point
+    {
+        var loc4:*=0;
+        var loc5:*=0;
+        var loc1:*=new flash.geom.Point(11, 4);
+        var loc2:*=int.MIN_VALUE;
+        if (arg1 >= loc1.x * loc1.y)
         {
-            buyButtonBitmapBackground = "shop_box_button_background";
-            super(_arg_1);
+            return loc1;
         }
-
-        private function prepareResultGrid(_arg_1:int):void
+        var loc3:*=11;
+        while (loc3 >= 1)
         {
-            this.maxResultWidth = 160;
-            this.gridConfig = this.calculateGrid(_arg_1);
-            this.resultElementWidth = this.calculateElementSize(this.gridConfig);
-            this.displayedItemsGrid = new UIGrid((this.resultElementWidth * this.gridConfig.x), this.gridConfig.x, 0);
-            this.displayedItemsGrid.x = (20 + Math.round(((this.maxResultWidth - (this.resultElementWidth * this.gridConfig.x)) / 2)));
-            this.displayedItemsGrid.y = Math.round((42 + ((this.maxResultHeight - (this.resultElementWidth * this.gridConfig.y)) / 2)));
-            this.displayedItemsGrid.centerLastRow = true;
-            addChild(this.displayedItemsGrid);
-        }
-
-        private function calculateGrid(_arg_1:int):Point
-        {
-            var _local_5:int;
-            var _local_6:int;
-            var _local_2:Point = new Point(11, 4);
-            var _local_3:int = int.MIN_VALUE;
-            if (_arg_1 >= (_local_2.x * _local_2.y))
+            loc4 = 4;
+            while (loc4 >= 1)
             {
-                return (_local_2);
-            }
-            var _local_4:int = 11;
-            while (_local_4 >= 1)
-            {
-                _local_5 = 4;
-                while (_local_5 >= 1)
+                if (loc3 * loc4 >= arg1 && (loc3 - 1) * (loc4 - 1) < arg1)
                 {
-                    if ((((_local_4 * _local_5) >= _arg_1) && (((_local_4 - 1) * (_local_5 - 1)) < _arg_1)))
+                    if ((loc5 = this.calculateElementSize(new flash.geom.Point(loc3, loc4))) != -1)
                     {
-                        _local_6 = this.calculateElementSize(new Point(_local_4, _local_5));
-                        if (_local_6 != -1)
+                        if (loc5 > loc2)
                         {
-                            if (_local_6 > _local_3)
+                            loc2 = loc5;
+                            loc1 = new flash.geom.Point(loc3, loc4);
+                        }
+                        else if (loc5 == loc2)
+                        {
+                            if (loc1.x * loc1.y - arg1 > loc3 * loc4 - arg1)
                             {
-                                _local_3 = _local_6;
-                                _local_2 = new Point(_local_4, _local_5);
-                            }
-                            else
-                            {
-                                if (_local_6 == _local_3)
-                                {
-                                    if (((_local_2.x * _local_2.y) - _arg_1) > ((_local_4 * _local_5) - _arg_1))
-                                    {
-                                        _local_3 = _local_6;
-                                        _local_2 = new Point(_local_4, _local_5);
-                                    }
-                                }
+                                loc2 = loc5;
+                                loc1 = new flash.geom.Point(loc3, loc4);
                             }
                         }
                     }
-                    _local_5--;
                 }
-                _local_4--;
+                --loc4;
             }
-            return (_local_2);
+            --loc3;
         }
-
-        private function calculateElementSize(_arg_1:Point):int
-        {
-            var _local_2:int = int(Math.floor((this.maxResultHeight / _arg_1.y)));
-            if ((_local_2 * _arg_1.x) > this.maxResultWidth)
-            {
-                _local_2 = int(Math.floor((this.maxResultWidth / _arg_1.x)));
-            }
-            if ((_local_2 * _arg_1.y) > this.maxResultHeight)
-            {
-                return (-1);
-            }
-            return (_local_2);
-        }
-
-        override protected function createBoxBackground():void
-        {
-            var _local_2:int;
-            var _local_4:UIItemContainer;
-            var _local_1:Array = MysteryBoxInfo(_boxInfo).displayedItems.split(",");
-            if (((_local_1.length == 0) || (MysteryBoxInfo(_boxInfo).displayedItems == "")))
-            {
-                return;
-            }
-            if (_infoButton)
-            {
-                _infoButton.alpha = 0;
-            }
-            switch (_local_1.length)
-            {
-                case 1:
-                    break;
-                case 2:
-                    _local_2 = 50;
-                    break;
-                case 3:
-                    break;
-            }
-            this.prepareResultGrid(_local_1.length);
-            var _local_3:int;
-            while (_local_3 < _local_1.length)
-            {
-                _local_4 = new UIItemContainer(_local_1[_local_3], 0, 0, this.resultElementWidth);
-                this.displayedItemsGrid.addGridElement(_local_4);
-                _local_3++;
-            }
-        }
-
-        override public function resize(_arg_1:int, _arg_2:int=-1):void
-        {
-            background.width = _arg_1;
-            backgroundTitle.width = _arg_1;
-            backgroundButton.width = _arg_1;
-            background.height = 184;
-            backgroundTitle.y = 2;
-            titleLabel.x = Math.round(((_arg_1 - titleLabel.textWidth) / 2));
-            titleLabel.y = 6;
-            backgroundButton.y = 133;
-            _buyButton.y = (backgroundButton.y + 4);
-            _buyButton.x = (_arg_1 - 110);
-            _infoButton.x = 130;
-            _infoButton.y = 45;
-            if (this.displayedItemsGrid)
-            {
-                this.displayedItemsGrid.x = (10 + Math.round(((this.maxResultWidth - (this.resultElementWidth * this.gridConfig.x)) / 2)));
-            }
-            updateTimeEndString();
-            updateSaleLabel();
-            updateClickMask(_arg_1);
-        }
-
-        override public function dispose():void
-        {
-            if (this.displayedItemsGrid)
-            {
-                this.displayedItemsGrid.dispose();
-            }
-            super.dispose();
-        }
-
-
+        return loc1;
     }
-}//package io.decagames.rotmg.shop.mysteryBox
 
+    internal function calculateElementSize(arg1:flash.geom.Point):int
+    {
+        var loc1:*=Math.floor(this.maxResultHeight / arg1.y);
+        if (loc1 * arg1.x > this.maxResultWidth)
+        {
+            loc1 = Math.floor(this.maxResultWidth / arg1.x);
+        }
+        if (loc1 * arg1.y > this.maxResultHeight)
+        {
+            return -1;
+        }
+        return loc1;
+    }
+
+    protected override function createBoxBackground():void
+    {
+        var loc2:*=0;
+        var loc4:*=null;
+        var loc1:*=kabam.rotmg.mysterybox.model.MysteryBoxInfo(_boxInfo).displayedItems.split(",");
+        if (loc1.length == 0 || kabam.rotmg.mysterybox.model.MysteryBoxInfo(_boxInfo).displayedItems == "")
+        {
+            return;
+        }
+        if (_infoButton)
+        {
+            _infoButton.alpha = 0;
+        }
+        var loc5:*=loc1.length;
+        switch (loc5)
+        {
+            case 1:
+            {
+                break;
+            }
+            case 2:
+            {
+                loc2 = 50;
+                break;
+            }
+            case 3:
+            {
+                break;
+            }
+        }
+        this.prepareResultGrid(loc1.length);
+        var loc3:*=0;
+        while (loc3 < loc1.length)
+        {
+            loc4 = new io.decagames.rotmg.shop.mysteryBox.contentPopup.UIItemContainer(loc1[loc3], 0, 0, this.resultElementWidth);
+            this.displayedItemsGrid.addGridElement(loc4);
+            ++loc3;
+        }
+        return;
+    }
+
+    public override function resize(arg1:int, arg2:int=-1):void
+    {
+        background.width = arg1;
+        backgroundTitle.width = arg1;
+        backgroundButton.width = arg1;
+        background.height = 184;
+        backgroundTitle.y = 2;
+        titleLabel.x = Math.round((arg1 - titleLabel.textWidth) / 2);
+        titleLabel.y = 6;
+        backgroundButton.y = 133;
+        _buyButton.y = backgroundButton.y + 4;
+        _buyButton.x = arg1 - 110;
+        _infoButton.x = 130;
+        _infoButton.y = 45;
+        if (this.displayedItemsGrid)
+        {
+            this.displayedItemsGrid.x = 10 + Math.round((this.maxResultWidth - this.resultElementWidth * this.gridConfig.x) / 2);
+        }
+        updateSaleLabel();
+        updateClickMask(arg1);
+        updateTimeEndString(arg1);
+        updateStartTimeString(arg1);
+        return;
+    }
+
+    public override function dispose():void
+    {
+        if (this.displayedItemsGrid)
+        {
+            this.displayedItemsGrid.dispose();
+        }
+        super.dispose();
+        return;
+    }
+
+    internal var displayedItemsGrid:io.decagames.rotmg.ui.gird.UIGrid;
+
+    internal var maxResultHeight:int=75;
+
+    internal var maxResultWidth:int;
+
+    internal var resultElementWidth:int;
+
+    internal var gridConfig:flash.geom.Point;
+}
+}

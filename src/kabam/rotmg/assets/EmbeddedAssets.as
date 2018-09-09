@@ -1,10 +1,12 @@
-﻿// Decompiled by AS3 Sorcerer 3.16
-// http://www.as3sorcerer.com/
+﻿// Decompiled by AS3 Sorcerer 5.94
+// www.as3sorcerer.com
 
 //kabam.rotmg.assets.EmbeddedAssets
 
-package kabam.rotmg.assets{
-    public class EmbeddedAssets {
+package kabam.rotmg.assets
+{
+    public class EmbeddedAssets 
+    {
 
         public static var particlesEmbed:Class = EmbeddedAssets_particlesEmbed;
         public static const StarburstSpinner:Class = EmbeddedAssets_StarburstSpinner;
@@ -239,6 +241,7 @@ package kabam.rotmg.assets{
             "Jacko":new jackoEmbed_(),
             "Pet Upgrader Obj":new petUpgrader_()
         };
+
 
     }
 }//package kabam.rotmg.assets

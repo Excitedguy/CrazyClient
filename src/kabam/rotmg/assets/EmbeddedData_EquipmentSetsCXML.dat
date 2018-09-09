@@ -140,4 +140,15 @@
       <ActivateOnEquipAll stat="28" amount="11">IncrementStat</ActivateOnEquipAll>
       <ActivateOnEquipAll stat="21" amount="2">IncrementStat</ActivateOnEquipAll>
    </EquipmentSet>
+   <EquipmentSet type="0xf3d" id="Akuma Slayer Set">
+      <Setpiece slot="0" itemtype="0x203e">Equipment</Setpiece>
+      <Setpiece slot="1" itemtype="0xf3c">Equipment</Setpiece>
+      <Setpiece slot="2" itemtype="0x2040">Equipment</Setpiece>
+      <Setpiece slot="3" itemtype="0x2041">Equipment</Setpiece>
+      <ActivateOnEquipAll skinType="0x7568" size="80" color="ffffff" bulletType="Katana Akuma Slash big">ChangeSkin</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="20" amount="3">IncrementStat</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="22" amount="4">IncrementStat</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="0" amount="115">IncrementStat</ActivateOnEquipAll>
+      <ActivateOnEquipAll stat="21" amount="10">IncrementStat</ActivateOnEquipAll>
+   </EquipmentSet>
 </EquipmentSets>

@@ -22,7 +22,6 @@ import kabam.rotmg.text.view.stringBuilder.LineBuilder;
 public class MysteryBoxInfo extends GenericBoxInfo
     {
 
-        public static var chestImageEmbed:Class = MysteryBoxInfo_chestImageEmbed;
 
         public var _iconImageUrl:String;
         private var _iconImage:DisplayObject;
@@ -61,7 +60,6 @@ public class MysteryBoxInfo extends GenericBoxInfo
 
         private function onError(_arg_1:IOErrorEvent):void
         {
-            this._iconImage = new chestImageEmbed();
         }
 
         private function onComplete(_arg_1:Event):void

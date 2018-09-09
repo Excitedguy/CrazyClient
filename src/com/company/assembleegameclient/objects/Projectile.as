@@ -449,6 +449,8 @@ public class Projectile extends BasicObject
                     case 11:
                     case 30:
                     case 31:
+                    case 38:
+                    case 48:
                         break;
                     default:
                         return ("Unknown: " + _local_2);

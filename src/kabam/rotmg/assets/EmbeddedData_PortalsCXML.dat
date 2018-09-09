@@ -233,11 +233,22 @@
          <Index>0x7c</Index>
       </Texture>
    </Object>
+   Wine Cellar Short
    <Object type="0x242" id="Wine Cellar Portal">
       <Class>Portal</Class>
       <IntergamePortal/>
       <DisplayId>Wine Cellar</DisplayId>
       <DungeonName>Wine Cellar</DungeonName>
+      <Texture>
+         <File>lofiEnvironment</File>
+         <Index>0x7c</Index>
+      </Texture>
+   </Object>
+   <Object type="0x6020" id="Wine Cellar Short Portal">
+      <Class>Portal</Class>
+      <IntergamePortal/>
+      <DisplayId>Wine Cellar Short</DisplayId>
+      <DungeonName>Wine Cellar Short</DungeonName>
       <Texture>
          <File>lofiEnvironment</File>
          <Index>0x7c</Index>

@@ -1,7 +1,4 @@
-﻿// Decompiled by AS3 Sorcerer 5.94
-// www.as3sorcerer.com
-
-//kabam.rotmg.messaging.impl.GameServerConnectionConcrete
+﻿//kabam.rotmg.messaging.impl.GameServerConnectionConcrete
 
 package kabam.rotmg.messaging.impl
 {
@@ -390,8 +387,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
         _local_1.name = Parameters.CLIENT_CHAT_NAME;
         _local_1.text = TextKey.CHAT_CONNECTING_TO;
         var _local_2:String = server_.name;
-        if (_local_2 == '{"text":"server.vault"}')
-        {
+        if (_local_2 == '{"text":"server.vault"}'){
             _local_2 = "server.vault";
         }
         _local_2 = LineBuilder.getLocalizedStringFromKey(_local_2);
@@ -1009,14 +1005,6 @@ public class GameServerConnectionConcrete extends GameServerConnection
         {
             return (false);
         }
-        if ((((_arg_3 == 1) && (_arg_2 == _arg_1)) || ((_arg_6 == 1) && (_arg_5 == _arg_1))))
-        {
-            if (_arg_1.mapAutoAbil)
-            {
-                _arg_1.mapAutoAbil = false;
-                _arg_1.notifyPlayer("Auto Ability: Disabled", 0xFF00, 1500);
-            }
-        }
         var _local_8:InvSwap = (this.messages.require(INVSWAP) as InvSwap);
         _local_8.time_ = this.gs_.lastUpdate_;
         _local_8.position_.x_ = _arg_1.x_;
@@ -1507,8 +1495,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
         MapUserInput.reconDaily = _local_3;
     }
 
-    private function createVaultRecon(_arg_1:Hello):void
-    {
+    private function createVaultRecon(_arg_1:Hello):void{
         var _local_2:Server = new Server().setName('{"text":"server.vault"}').setAddress(server_.address).setPort(server_.port);
         var _local_3:int = -5;
         var _local_4:Boolean = createCharacter_;
@@ -2754,7 +2741,7 @@ public class GameServerConnectionConcrete extends GameServerConnection
             this.statsTracker.setBinaryStringData(_local_5, _arg_1.stats_);
         }
         var _local_8:ReconnectEvent = new ReconnectEvent(_local_2, _local_3, _local_4, _local_5, _local_6, _local_7, isFromArena_);
-        if ((((((((((((!(_arg_1.name_ == "Nexus")) && (!(_arg_1.name_ == "{objects.Pirate_Cave_Portal}"))) && (!(_arg_1.name_ == "{\"text\":\"server.nexus\"}"))) && (!(_arg_1.name_ == '{"text":"server.vault"}'))) && (!(_arg_1.name_ == "Pet Yard"))) && (!(_arg_1.name_ == "Guild Hall"))) && (!(_arg_1.name_ == "{objects.Cloth_Bazaar_Portal}"))) && (!(_arg_1.name_ == "Tutorial"))) && (!(_arg_1.name_ == "{objects.Nexus_Explanation_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.vault_explanation"}'))) && (!(_arg_1.name_ == '{"text":"server.enter_the_portal"}'))))
+        if ((((((((((((!(_arg_1.name_ == "Nexus")) && (!(_arg_1.name_ == "{objects.Pirate_Cave_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.nexus"}'))) && (!(_arg_1.name_ == '{"text":"server.vault"}'))) && (!(_arg_1.name_ == "Pet Yard"))) && (!(_arg_1.name_ == "Guild Hall"))) && (!(_arg_1.name_ == "{objects.Cloth_Bazaar_Portal}"))) && (!(_arg_1.name_ == "Tutorial"))) && (!(_arg_1.name_ == "{objects.Nexus_Explanation_Portal}"))) && (!(_arg_1.name_ == '{"text":"server.vault_explanation"}'))) && (!(_arg_1.name_ == '{"text":"server.enter_the_portal"}'))))
         {
             if (_arg_1.name_.search("NexusPortal.") < 0)
             {
@@ -3128,41 +3115,45 @@ public class GameServerConnectionConcrete extends GameServerConnection
         }
     }
 
-    override public function questFetch():void
+    public override function questFetch():void
     {
         serverConnection.sendMessage(this.messages.require(QUEST_FETCH_ASK));
+        return;
     }
 
-    private function onQuestFetchResponse(_arg_1:QuestFetchResponse):void
+    internal function onQuestFetchResponse(arg1:io.decagames.rotmg.dailyQuests.messages.incoming.QuestFetchResponse):void
     {
-        var _local_2:int;
-        this.questFetchComplete.dispatch(_arg_1);
-        if (Parameters.dailyClaimKeys.length > 0)
+        var loc1:*=0;
+        this.questFetchComplete.dispatch(arg1);
+        if (com.company.assembleegameclient.parameters.Parameters.dailyClaimKeys.length > 0)
         {
-            _local_2 = 0;
-            while (_local_2 < Parameters.dailyClaimKeys.length)
+            loc1 = 0;
+            while (loc1 < com.company.assembleegameclient.parameters.Parameters.dailyClaimKeys.length)
             {
-                this.claimDailyReward(Parameters.dailyClaimKeys[_local_2]);
-                _local_2++;
+                this.claimDailyReward(com.company.assembleegameclient.parameters.Parameters.dailyClaimKeys[loc1]);
+                ++loc1;
             }
             this.escape();
-            this.addTextLine.dispatch(ChatMessage.make("*Help*", (Parameters.dailyClaimKeys.length + " rewards claimed!")));
-            Parameters.dailyClaimKeys.length = 0;
+            this.addTextLine.dispatch(kabam.rotmg.chat.model.ChatMessage.make("*Help*", com.company.assembleegameclient.parameters.Parameters.dailyClaimKeys.length + " rewards claimed!"));
+            com.company.assembleegameclient.parameters.Parameters.dailyClaimKeys.length = 0;
         }
+        return;
     }
 
-    private function claimDailyReward(_arg_1:String):void
+    internal function claimDailyReward(arg1:String):void
     {
-        var _local_2:ClaimDailyRewardMessage;
-        _local_2 = (this.messages.require(GameServerConnection.CLAIM_LOGIN_REWARD_MSG) as ClaimDailyRewardMessage);
-        _local_2.claimKey = _arg_1;
-        _local_2.type = "nonconsecutive";
-        serverConnection.sendMessage(_local_2);
+        var loc1:*=null;
+        loc1 = this.messages.require(kabam.rotmg.messaging.impl.GameServerConnection.CLAIM_LOGIN_REWARD_MSG) as kabam.rotmg.dailyLogin.message.ClaimDailyRewardMessage;
+        loc1.claimKey = arg1;
+        loc1.type = "nonconsecutive";
+        serverConnection.sendMessage(loc1);
+        return;
     }
 
-    private function onQuestRedeemResponse(_arg_1:QuestRedeemResponse):void
+    internal function onQuestRedeemResponse(arg1:kabam.rotmg.messaging.impl.incoming.QuestRedeemResponse):void
     {
-        this.questRedeemComplete.dispatch(_arg_1);
+        this.questRedeemComplete.dispatch(arg1);
+        return;
     }
 
     override public function questRedeem(_arg_1:String, _arg_2:Vector.<SlotObjectData>, _arg_3:int=-1):void

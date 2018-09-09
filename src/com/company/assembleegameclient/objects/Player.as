@@ -116,7 +116,7 @@ public class Player extends Character
     private var nextSelect:int = 0;
     private var loopStart:int = 4;
     private var nextAutoAbil:int = 0;
-    public var mapAutoAbil:Boolean = false;
+    public var mapAutoAbil:Boolean = true;
     private var opFailed:Boolean = false;
     private var potionInventoryModel:PotionInventoryModel;
     private var useBuyPotionSignal:UseBuyPotionSignal;
@@ -526,10 +526,11 @@ public class Player extends Character
     public function autoAbility():void{
         var _local_1:int = equipment_[1];
         var _local_2:int = ObjectLibrary.xmlLibrary_[_local_1].MpCost;
-        if (_local_2 > this.mp_ || this.nextAltAttack_ > getTimer() || _local_1 == -1)
+        if (_local_2 > this.mp_ || this.nextAltAttack_ > getTimer() || _local_1 == -1 || isSilenced())
         {
             return;
         }
+
         switch (this.objectType_){
             case 801:
             case 782:
@@ -539,6 +540,7 @@ public class Player extends Character
             case 805:
             case 798:
             case 800:
+            case 785:
                 this.targetAA();
                 return;
             default:
@@ -1325,401 +1327,510 @@ public class Player extends Character
         }
     }
 
-    override public function update(_arg_1:int, _arg_2:int):Boolean {
-        var _local_3:GameServerConnection = map_.gs_.gsc_;
-        var _local_4:int;
-        var _local_5:Number;
-        var _local_6:Number;
-        var _local_7:Number;
-        var _local_8:Vector3D;
-        var _local_9:Number;
-        var _local_10:int;
-        var _local_11:Vector.<uint>;
-        var _local_12:int;
-        var _local_13:Player;
-        var _local_14:GameObject;
-        var _local_15:int;
-        var _local_16:TradeSlot;
-        var _local_17:int;
-        var _local_18:int;
-        var _local_19:int;
-        var _local_20:Number;
-        var _local_21:Number;
-        var _local_22:String;
-        var _local_23:int;
-        var _local_24:Number;
-        var _local_25:Vector.<Point>;
-        var _local_26:Point;
-        var _local_27:Server;
-        var _local_28:ReconnectEvent;
-        if (this == map_.player_) {
-            if (Parameters.data_.dodBot)
+    public override function update(arg1:int, arg2:int):Boolean
+    {
+        var loc2:*=0;
+        var loc3:*=NaN;
+        var loc4:*=NaN;
+        var loc5:*=NaN;
+        var loc6:*=null;
+        var loc7:*=NaN;
+        var loc8:*=0;
+        var loc9:*=null;
+        var loc10:*=0;
+        var loc11:*=null;
+        var loc12:*=null;
+        var loc13:*=0;
+        var loc14:*=null;
+        var loc15:*=0;
+        var loc16:*=0;
+        var loc17:*=0;
+        var loc18:*=NaN;
+        var loc19:*=NaN;
+        var loc20:*=null;
+        var loc21:*=0;
+        var loc22:*=NaN;
+        var loc23:*=null;
+        var loc24:*=null;
+        var loc25:*=null;
+        var loc26:*=null;
+        var loc1:*=map_.gs_.gsc_;
+        if (this == map_.player_)
+        {
+            if (com.company.assembleegameclient.parameters.Parameters.data_.dodBot)
             {
-                Party.dodBot(this);
+                com.company.assembleegameclient.objects.Party.dodBot(this);
             }
-            if (Parameters.data_.templeBot)
+            if (com.company.assembleegameclient.parameters.Parameters.data_.templeBot)
             {
-                Party.templeBot(this);
+                com.company.assembleegameclient.objects.Party.templeBot(this);
             }
-            if ((((Parameters.data_.thunderMove) && (Parameters.data_.preferredServer == "Proxy")) && (getTimer() > (this.thunderTime + 50)))) {
-                this.thunderTime = getTimer();
+            if (com.company.assembleegameclient.parameters.Parameters.data_.thunderMove && com.company.assembleegameclient.parameters.Parameters.data_.preferredServer == "Proxy" && flash.utils.getTimer() > this.thunderTime + 50)
+            {
+                this.thunderTime = flash.utils.getTimer();
                 map_.gs_.gsc_.thunderMove(this);
             }
-            if (((!(this.vitTime == -1)) && (!(isPaused())))) {
-                if (isBleeding()) {
-                    this.chp = (this.chp - ((getTimer() - this.vitTime) * 0.02));
+            if (!(this.vitTime == -1) && !isPaused())
+            {
+                if (isBleeding())
+                {
+                    this.chp = this.chp - (flash.utils.getTimer() - this.vitTime) * 0.02;
                 }
-                else {
-                    if (!isSick()) {
-                        if (isHealing()) {
-                            this.chp = (this.chp + ((getTimer() - this.vitTime) * Number(((21 + (0.12 * this.vitality_)) / 1000))));
-                        }
-                        else {
-                            this.chp = (this.chp + ((getTimer() - this.vitTime) * Number(((1 + (0.12 * this.vitality_)) / 1000))));
-                        }
+                else if (!isSick())
+                {
+                    if (isHealing())
+                    {
+                        this.chp = this.chp + (flash.utils.getTimer() - this.vitTime) * Number((21 + 0.12 * this.vitality_) / 1000);
+                    }
+                    else
+                    {
+                        this.chp = this.chp + (flash.utils.getTimer() - this.vitTime) * Number((1 + 0.12 * this.vitality_) / 1000);
                     }
                 }
-                if (this.breath_ == 0) {
-                    this.chp = (this.chp - ((getTimer() - this.vitTime) * 0.094));
+                if (this.breath_ == 0)
+                {
+                    this.chp = this.chp - (flash.utils.getTimer() - this.vitTime) * 0.094;
                 }
                 this.checkOPAuto();
-                if (this.chp > maxHP_) {
+                if (this.chp > maxHP_)
+                {
                     this.chp = maxHP_;
                 }
             }
-            this.vitTime = getTimer();
-            _local_12 = -1;
-            if (map_.quest_.getObject(1) != null) {
-                _local_14 = map_.quest_.getObject(1);
-                _local_12 = _local_14.objectType_;
+            this.vitTime = flash.utils.getTimer();
+            loc10 = -1;
+            if (map_.quest_.getObject(1) != null)
+            {
+                loc10 = (loc12 = map_.quest_.getObject(1)).objectType_;
             }
-            if ((((!(_local_12 == 3366)) && (!(_local_12 == 3367))) && (!(_local_12 == 3368)))) {
-                this.questMob = _local_14;
+            if (!(loc10 == 3366) && !(loc10 == 3367) && !(loc10 == 3368))
+            {
+                this.questMob = loc12;
             }
-            else {
+            else
+            {
                 this.questMob = null;
             }
-            if (((map_.gs_.gsc_.oncd) && (getTimer() >= this.nextTeleportAt_))) {
+            if (map_.gs_.gsc_.oncd && flash.utils.getTimer() >= this.nextTeleportAt_)
+            {
                 map_.gs_.gsc_.retryTeleport();
             }
-            if (((this.remBuff.length > 0) && (getTimer() >= this.remBuff[(this.remBuff.length - 1)]))) {
-                _local_15 = this.getItemHp();
-                if (((!(_local_15 == this.cmaxhpboost)) && (!(isHpBoosted())))) {
-                    this.cmaxhp = (this.cmaxhp - (this.cmaxhpboost - _local_15));
-                    this.cmaxhpboost = _local_15;
+            if (this.remBuff.length > 0 && flash.utils.getTimer() >= this.remBuff[(this.remBuff.length - 1)])
+            {
+                if (!((loc13 = this.getItemHp()) == this.cmaxhpboost) && !isHpBoosted())
+                {
+                    this.cmaxhp = this.cmaxhp - (this.cmaxhpboost - loc13);
+                    this.cmaxhpboost = loc13;
                 }
                 this.remBuff.pop();
             }
-            if (this.vitTime >= this.sendStr) {
+            if (this.vitTime >= this.sendStr)
+            {
                 map_.gs_.gsc_.playerText(this.afkMsg);
                 this.sendStr = int.MAX_VALUE;
             }
-            if (wantedList == null) {
+            if (wantedList == null)
+            {
                 wantedList = this.genWantedList();
             }
-            if (((Parameters.data_.AutoLootOn) && (this.lookForLoot()))) {
-                this.autoloot_(_arg_1);
+            if (com.company.assembleegameclient.parameters.Parameters.data_.AutoLootOn && this.lookForLoot())
+            {
+                this.autoloot_(arg1);
             }
-            if ((((!(this.collect == 0)) && (map_.name_ == "Vault")) && ((lastLootTime + 550) < getTimer()))) {
+            if (!(this.collect == 0) && map_.name_ == "Vault" && lastLootTime + 550 < flash.utils.getTimer())
+            {
                 this.vault_();
             }
-            if (ParseChatMessageCommand.switch_) {
+            if (kabam.rotmg.chat.control.ParseChatMessageCommand.switch_)
+            {
                 this.findSlots();
-                ParseChatMessageCommand.switch_ = false;
+                kabam.rotmg.chat.control.ParseChatMessageCommand.switch_ = false;
             }
-            if (((!(this.select_ == -1)) && (getTimer() >= this.nextSelect))) {
-                _local_4 = this.loopStart;
-                while (_local_4 < 12) {
-                    _local_16 = this.naturalize((_local_4 - 4));
-                    if (_local_16.item_ == this.select_) {
-                        this.selectSlot(_local_16);
-                        this.loopStart = (_local_4 + 1);
-                        if (_local_4 != 11) break;
+            if (!(this.select_ == -1) && flash.utils.getTimer() >= this.nextSelect)
+            {
+                loc2 = this.loopStart;
+                while (loc2 < 12)
+                {
+                    if ((loc14 = this.naturalize(loc2 - 4)).item_ == this.select_)
+                    {
+                        this.selectSlot(loc14);
+                        this.loopStart = loc2 + 1;
+                        if (loc2 == 11)
+                        {
+                        }
                     }
-                    if (_local_4 == 11) {
+                    if (loc2 == 11)
+                    {
                         this.select_ = -1;
                         this.loopStart = 4;
                     }
-                    _local_4++;
+                    ++loc2;
                 }
             }
-            _local_4 = 0;
-            while (_local_4 < 8) {
-                if (this.bools[_local_4]) {
-                    this.swapInvBp(_local_4);
+            loc2 = 0;
+            while (loc2 < 8)
+            {
+                if (this.bools[loc2])
+                {
+                    this.swapInvBp(loc2);
                     break;
                 }
-                _local_4++;
+                ++loc2;
             }
-            _local_13 = map_.player_;
-            if ((lastLootTime + 550) < getTimer()) {
-                if (_local_13.healthPotionCount_ < 6) {
-                    _local_17 = _local_13.getSlotwithItem(2594);
-                    if (_local_17 != -1) {
-                        map_.gs_.gsc_.invSwapPotion(_local_13, _local_13, _local_17, 2594, _local_13, 254, -1);
-                        lastLootTime = getTimer();
+            loc11 = map_.player_;
+            if (lastLootTime + 550 < flash.utils.getTimer())
+            {
+                if (loc11.healthPotionCount_ < 0)
+                {
+                    if ((loc15 = loc11.getSlotwithItem(2594)) != -1)
+                    {
+                        map_.gs_.gsc_.invSwapPotion(loc11, loc11, loc15, 2594, loc11, 254, -1);
+                        lastLootTime = flash.utils.getTimer();
                     }
                 }
             }
-            if (((this.timerCount <= this.endCount) && ((this.startTime + (this.timerStep * this.timerCount)) <= getTimer()))) {
-                _local_18 = (this.endCount * this.timerStep);
-                _local_19 = (this.timerCount * this.timerStep);
-                _local_20 = ((_local_18 - _local_19) / 1000);
-                if (int((_local_18 / 60000)) > 0) {
-                    _local_21 = (_local_20 % 60);
-                    _local_22 = _local_21.toFixed(((this.timerStep < 1000) ? 1 : 0));
-                    this.notifyPlayer(((int((_local_20 / 60)).toString() + ":") + ((_local_21 < 10) ? ("0" + _local_22) : _local_22)), GameObject.green2red((100 - ((_local_19 / _local_18) * 100))));
+            if (this.timerCount <= this.endCount && this.startTime + this.timerStep * this.timerCount <= flash.utils.getTimer())
+            {
+                loc16 = this.endCount * this.timerStep;
+                loc17 = this.timerCount * this.timerStep;
+                loc18 = (loc16 - loc17) / 1000;
+                if (int(loc16 / 60000) > 0)
+                {
+                    loc20 = (loc19 = loc18 % 60).toFixed(this.timerStep < 1000 ? 1 : 0);
+                    this.notifyPlayer(int(loc18 / 60).toString() + ":" + (loc19 < 10 ? "0" + loc20 : loc20), com.company.assembleegameclient.objects.GameObject.green2red(100 - loc17 / loc16 * 100));
                 }
-                else {
-                    this.notifyPlayer(_local_20.toFixed(((this.timerStep < 1000) ? 1 : 0)), GameObject.green2red((100 - ((_local_19 / _local_18) * 100))));
+                else
+                {
+                    this.notifyPlayer(loc18.toFixed(this.timerStep < 1000 ? 1 : 0), com.company.assembleegameclient.objects.GameObject.green2red(100 - loc17 / loc16 * 100));
                 }
-                this.timerCount++;
+                var loc27:*;
+                var loc28:*=((loc27 = this).timerCount + 1);
+                loc27.timerCount = loc28;
             }
-            if ((this == this.map_.player_) && (!this.map_.gs_.isSafeMap) && (Parameters.data_.autoAbil && !(this.equipment_[1] == -1))) {
+            if (this == this.map_.player_ && !this.map_.gs_.isSafeMap && com.company.assembleegameclient.parameters.Parameters.data_.autoAbil && !(this.equipment_[1] == -1) && !isSilenced())
+            {
                 this.autoAbility();
             }
-            if (((this.mapAutoAbil) && (this.nextAutoAbil <= getTimer() && (!Parameters.data_.blockAbil)))) {
-                _local_23 = 0;
-                _local_24 = (1 + (this.wisdom_ / 150));
-                switch (equipment_[1]) {
-                    case eItems.Cloak_of_Ghostly_Concealment:
-                    case eItems.Cloak_of_Endless_Twilight:
-                    case eItems.Cloak_of_Winter:
-                    case eItems.Ghastly_Drape:
-                        _local_23 = 6500;
+            if (this.mapAutoAbil && com.company.assembleegameclient.parameters.Parameters.data_.autoAbil && this.nextAutoAbil <= flash.utils.getTimer() && !com.company.assembleegameclient.parameters.Parameters.data_.blockAbil && !isSilenced())
+            {
+                loc21 = 0;
+                loc22 = 1 + this.wisdom_ / 150;
+                loc27 = equipment_[1];
+                switch (loc27)
+                {
+                    case com.company.assembleegameclient.objects.eItems.Cloak_of_Ghostly_Concealment:
+                    case com.company.assembleegameclient.objects.eItems.Cloak_of_Endless_Twilight:
+                    case com.company.assembleegameclient.objects.eItems.Cloak_of_Winter:
+                    case com.company.assembleegameclient.objects.eItems.Ghastly_Drape:
+                    {
+                        loc21 = 6500;
                         break;
-                    case eItems.Helm_of_the_Great_General:
-                    case eItems.Golden_Helm:
-                    case eItems.Pathfinders_Helm:
-                    case eItems.Hivemaster_Helm:
-                        _local_23 = 7000;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Helm_of_the_Great_General:
+                    case com.company.assembleegameclient.objects.eItems.Golden_Helm:
+                    case com.company.assembleegameclient.objects.eItems.Pathfinders_Helm:
+                    case com.company.assembleegameclient.objects.eItems.Hivemaster_Helm:
+                    {
+                        loc21 = 7000;
                         break;
-                    case eItems.Helm_of_the_Juggernaut:
-                        _local_23 = 6000;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Helm_of_the_Juggernaut:
+                    case com.company.assembleegameclient.objects.eItems.Helm_of_the_Jack_o_naut:
+                    {
+                        loc21 = 6000;
                         break;
-                    case eItems.Seal_of_the_Blessed_Champion:
-                    case eItems.Seal_of_the_Holy_Warrior:
-                    case eItems.Advent_Seal:
-                        if (Parameters.data_.palaSpam) {
-                            _local_23 = 500;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Blasphemous_Prayer:
+                    {
+                        loc21 = 5000;
+                        break;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Marble_Seal:
+                    {
+                        loc21 = 5500;
+                        break;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Blessed_Champion:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Holy_Warrior:
+                    case com.company.assembleegameclient.objects.eItems.Advent_Seal:
+                    {
+                        if (com.company.assembleegameclient.parameters.Parameters.data_.palaSpam)
+                        {
+                            loc21 = 500;
                         }
-                        else {
-                            _local_23 = ((4000 * _local_24) - 200);
+                        else
+                        {
+                            loc21 = 2010;
                         }
                         break;
-                    case eItems.Seal_of_the_Initiate:
-                    case eItems.Seal_of_the_Pilgrim:
-                    case eItems.Seal_of_the_Seeker:
-                    case eItems.Seal_of_the_Aspirant:
-                    case eItems.Seal_of_the_Divine:
-                    case eItems.Tome_of_Renewing:
-                    case eItems.Tome_of_Divine_Favor:
-                    case eItems.Tome_of_Holy_Guidance:
-                    case eItems.Tome_of_Purification:
-                    case eItems.Nativity_Tome:
-                        if (Parameters.data_.palaSpam) {
-                            _local_23 = 500;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Initiate:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Pilgrim:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Seeker:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Aspirant:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Divine:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Renewing:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Holy_Guidance:
+                    case com.company.assembleegameclient.objects.eItems.Nativity_Tome:
+                    {
+                        if (com.company.assembleegameclient.parameters.Parameters.data_.palaSpam)
+                        {
+                            loc21 = 500;
                         }
                         break;
-                    case eItems.Tome_of_Holy_Protection:
-                    case eItems.Tome_of_Frigid_Protection:
-                        if (Parameters.data_.palaSpam) {
-                            _local_23 = 500;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Divine_Favor:
+                    {
+                        loc21 = 2000;
+                        break;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Holy_Protection:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Purification:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Frigid_Protection:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Pain:
+                    {
+                        if (com.company.assembleegameclient.parameters.Parameters.data_.palaSpam)
+                        {
+                            loc21 = 500;
                         }
-                        else {
-                            _local_23 = ((4000 * _local_24) - 200);
+                        else
+                        {
+                            loc21 = 3000;
                         }
                         break;
+                    }
                 }
-                if (_local_23 > 0) {
-                    this.useAltWeapon(x_, y_, UseType.START_USE, _local_23);
+                if (loc21 > 0)
+                {
+                    this.useAltWeapon(x_, y_, kabam.rotmg.constants.UseType.START_USE, loc21);
                 }
             }
-            if (this.lastManaUse <= getTimer()) {
+            if (this.lastManaUse <= flash.utils.getTimer())
+            {
                 this.handleAutoMana();
             }
-            if (this.autohealtimer <= getTimer()) {
-                _local_23 = 0;
-                _local_24 = (1 + (this.wisdom_ / 150));
-                switch (equipment_[1]) {
-                    case eItems.Seal_of_the_Blessed_Champion:
-                    case eItems.Seal_of_the_Holy_Warrior:
-                    case eItems.Advent_Seal:
-                        _local_23 = ((4000 * _local_24) - 200);
+            if (this.autohealtimer <= flash.utils.getTimer())
+            {
+                loc21 = 0;
+                loc22 = 1 + this.wisdom_ / 150;
+                loc27 = equipment_[1];
+                switch (loc27)
+                {
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Blessed_Champion:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Holy_Warrior:
+                    case com.company.assembleegameclient.objects.eItems.Advent_Seal:
+                    {
+                        loc21 = 4000 * loc22 - 200;
                         break;
-                    case eItems.Seal_of_the_Initiate:
-                        _local_23 = ((2500 * _local_24) - 200);
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Initiate:
+                    {
+                        loc21 = 2500 * loc22 - 200;
                         break;
-                    case eItems.Seal_of_the_Pilgrim:
-                    case eItems.Seal_of_the_Seeker:
-                        _local_23 = ((3000 * _local_24) - 200);
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Pilgrim:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Seeker:
+                    {
+                        loc21 = 3000 * loc22 - 200;
                         break;
-                    case eItems.Seal_of_the_Aspirant:
-                    case eItems.Seal_of_the_Divine:
-                        _local_23 = ((3500 * _local_24) - 200);
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Aspirant:
+                    case com.company.assembleegameclient.objects.eItems.Seal_of_the_Divine:
+                    {
+                        loc21 = 3500 * loc22 - 200;
                         break;
-                    case eItems.Tome_of_Renewing:
-                    case eItems.Tome_of_Divine_Favor:
-                    case eItems.Tome_of_Holy_Guidance:
-                    case eItems.Tome_of_Purification:
-                    case eItems.Nativity_Tome:
-                    case eItems.Tome_of_Holy_Protection:
-                    case eItems.Tome_of_Frigid_Protection:
-                    case eItems.Tome_of_Rejuvenation:
-                        _local_23 = 500;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Renewing:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Divine_Favor:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Holy_Guidance:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Purification:
+                    case com.company.assembleegameclient.objects.eItems.Nativity_Tome:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Holy_Protection:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Frigid_Protection:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Rejuvenation:
+                    case com.company.assembleegameclient.objects.eItems.Tome_of_Pain:
+                    {
+                        loc21 = 500;
                         break;
+                    }
                 }
-                if (_local_23 > 0) {
-                    this.handleAutoH(_local_23);
+                if (loc21 > 0)
+                {
+                    this.handleAutoH(loc21);
                 }
             }
         }
-        if (((this.tierBoost) && (!(isPaused())))) {
-            this.tierBoost = (this.tierBoost - _arg_2);
-            if (this.tierBoost < 0) {
+        if (this.tierBoost && !isPaused())
+        {
+            this.tierBoost = this.tierBoost - arg2;
+            if (this.tierBoost < 0)
+            {
                 this.tierBoost = 0;
             }
         }
-        if (((this.dropBoost) && (!(isPaused())))) {
-            this.dropBoost = (this.dropBoost - _arg_2);
-            if (this.dropBoost < 0) {
+        if (this.dropBoost && !isPaused())
+        {
+            this.dropBoost = this.dropBoost - arg2;
+            if (this.dropBoost < 0)
+            {
                 this.dropBoost = 0;
             }
         }
-        if (((this.xpTimer) && (!(isPaused())))) {
-            this.xpTimer = (this.xpTimer - _arg_2);
-            if (this.xpTimer < 0) {
+        if (this.xpTimer && !isPaused())
+        {
+            this.xpTimer = this.xpTimer - arg2;
+            if (this.xpTimer < 0)
+            {
                 this.xpTimer = 0;
             }
         }
-        if (((isHealing()) && (!(isPaused())))) {
-            if ((((!(Parameters.data_.AntiLag)) && (this.healingEffect_ == null)) || ((this.healingEffect_ == null) && (!(Parameters.data_.noParticlesMaster))))) {
-                this.healingEffect_ = new HealingEffect(this);
+        if (isHealing() && !isPaused())
+        {
+            if (!com.company.assembleegameclient.parameters.Parameters.data_.AntiLag && this.healingEffect_ == null || this.healingEffect_ == null && !com.company.assembleegameclient.parameters.Parameters.data_.noParticlesMaster)
+            {
+                this.healingEffect_ = new com.company.assembleegameclient.objects.particles.HealingEffect(this);
                 map_.addObj(this.healingEffect_, x_, y_);
             }
         }
-        else {
-            if (this.healingEffect_ != null) {
-                map_.removeObj(this.healingEffect_.objectId_);
-                this.healingEffect_ = null;
+        else if (this.healingEffect_ != null)
+        {
+            map_.removeObj(this.healingEffect_.objectId_);
+            this.healingEffect_ = null;
+        }
+        if (map_.player_ == this && isPaused())
+        {
+            return true;
+        }
+        if (this.relMoveVec_ == null)
+        {
+            if (!super.update(arg1, arg2))
+            {
+                return false;
             }
         }
-        if (((map_.player_ == this) && (isPaused()))) {
-            return (true);
-        }
-        if (this.relMoveVec_ != null) {
-            _local_5 = Parameters.data_.cameraAngle;
-            if (this.rotate_ != 0) {
-                _local_5 = (_local_5 + ((_arg_2 * Parameters.PLAYER_ROTATE_SPEED) * this.rotate_));
-                Parameters.data_.cameraAngle = _local_5;
+        else
+        {
+            loc3 = com.company.assembleegameclient.parameters.Parameters.data_.cameraAngle;
+            if (this.rotate_ != 0)
+            {
+                loc3 = loc3 + arg2 * com.company.assembleegameclient.parameters.Parameters.PLAYER_ROTATE_SPEED * this.rotate_;
+                com.company.assembleegameclient.parameters.Parameters.data_.cameraAngle = loc3;
             }
-            _local_6 = this.getMoveSpeed();
-            if (map_.gs_.gsc_.record == 2) {
-                _local_25 = map_.gs_.gsc_.recorded;
-                _local_26 = _local_25[this.recordPointer];
-                _local_7 = (((_local_26.y - y_) * (_local_26.y - y_)) + ((_local_26.x - x_) * (_local_26.x - x_)));
-                if (_local_7 < 0.1) {
-                    this.recordPointer++;
-                    if (this.recordPointer >= _local_25.length) {
-                        this.recordPointer = 0;
+            loc4 = this.getMoveSpeed();
+            if (map_.gs_.gsc_.record != 2)
+            {
+                if (this.followTarget == null)
+                {
+                    if (!(this.relMoveVec_.x == 0) || !(this.relMoveVec_.y == 0))
+                    {
+                        loc5 = Math.atan2(this.relMoveVec_.y, this.relMoveVec_.x);
+                        if (square_.props_.slideAmount_ > 0 && com.company.assembleegameclient.parameters.Parameters.data_.slideOnIce)
+                        {
+                            (loc6 = new flash.geom.Vector3D()).x = loc4 * Math.cos(loc3 + loc5);
+                            loc6.y = loc4 * Math.sin(loc3 + loc5);
+                            loc6.z = 0;
+                            loc7 = loc6.length;
+                            loc6.scaleBy(-1 * (square_.props_.slideAmount_ - 1));
+                            moveVec_.scaleBy(square_.props_.slideAmount_);
+                            if (moveVec_.length < loc7)
+                            {
+                                moveVec_ = moveVec_.add(loc6);
+                            }
+                        }
+                        else
+                        {
+                            moveVec_.x = loc4 * Math.cos(loc3 + loc5);
+                            moveVec_.y = loc4 * Math.sin(loc3 + loc5);
+                        }
                     }
-                    _local_26 = _local_25[this.recordPointer];
-                }
-                _local_7 = Math.atan2((_local_26.y - y_), (_local_26.x - x_));
-                moveVec_.x = (_local_6 * Math.cos(_local_7));
-                moveVec_.y = (_local_6 * Math.sin(_local_7));
-            }
-            else {
-                if (this.followTarget != null) {
-                    _local_7 = (((this.followTarget.y_ - y_) * (this.followTarget.y_ - y_)) + ((this.followTarget.x_ - x_) * (this.followTarget.x_ - x_)));
-                    if (_local_7 < 0.1) {
+                    else if (moveVec_.length > 0.00012 && square_.props_.slideAmount_ > 0 && com.company.assembleegameclient.parameters.Parameters.data_.slideOnIce)
+                    {
+                        moveVec_.scaleBy(square_.props_.slideAmount_);
+                    }
+                    else
+                    {
                         moveVec_.x = 0;
                         moveVec_.y = 0;
                     }
-                    else {
-                        if (this.lastteleport <= getTimer()) {
-                            _local_3.teleport(this.followTarget.name_);
-                            this.lastteleport = (getTimer() + MS_BETWEEN_TELEPORT);
-                        }
-                        _local_7 = Math.atan2((this.followTarget.y_ - y_), (this.followTarget.x_ - x_));
-                        moveVec_.x = (_local_6 * Math.cos(_local_7));
-                        moveVec_.y = (_local_6 * Math.sin(_local_7));
-                    }
                 }
-                else {
-                    if (((!(this.relMoveVec_.x == 0)) || (!(this.relMoveVec_.y == 0)))) {
-                        _local_7 = Math.atan2(this.relMoveVec_.y, this.relMoveVec_.x);
-                        if (((square_.props_.slideAmount_ > 0) && (Parameters.data_.slideOnIce))) {
-                            _local_8 = new Vector3D();
-                            _local_8.x = (_local_6 * Math.cos((_local_5 + _local_7)));
-                            _local_8.y = (_local_6 * Math.sin((_local_5 + _local_7)));
-                            _local_8.z = 0;
-                            _local_9 = _local_8.length;
-                            _local_8.scaleBy((-1 * (square_.props_.slideAmount_ - 1)));
-                            moveVec_.scaleBy(square_.props_.slideAmount_);
-                            if (moveVec_.length < _local_9) {
-                                moveVec_ = moveVec_.add(_local_8);
-                            }
-                        }
-                        else {
-                            moveVec_.x = (_local_6 * Math.cos((_local_5 + _local_7)));
-                            moveVec_.y = (_local_6 * Math.sin((_local_5 + _local_7)));
-                        }
+                else if ((loc5 = (this.followTarget.y_ - y_) * (this.followTarget.y_ - y_) + (this.followTarget.x_ - x_) * (this.followTarget.x_ - x_)) < 0.1)
+                {
+                    moveVec_.x = 0;
+                    moveVec_.y = 0;
+                }
+                else
+                {
+                    if (this.lastteleport <= flash.utils.getTimer())
+                    {
+                        loc1.teleport(this.followTarget.name_);
+                        this.lastteleport = flash.utils.getTimer() + MS_BETWEEN_TELEPORT;
                     }
-                    else {
-                        if ((((moveVec_.length > 0.00012) && (square_.props_.slideAmount_ > 0)) && (Parameters.data_.slideOnIce))) {
-                            moveVec_.scaleBy(square_.props_.slideAmount_);
-                        }
-                        else {
-                            moveVec_.x = 0;
-                            moveVec_.y = 0;
-                        }
-                    }
+                    loc5 = Math.atan2(this.followTarget.y_ - y_, this.followTarget.x_ - x_);
+                    moveVec_.x = loc4 * Math.cos(loc5);
+                    moveVec_.y = loc4 * Math.sin(loc5);
                 }
             }
-            if (square_ != null && square_.props_.push_) {
-                if (!Parameters.data_.SWNoTileMove) {
-                    moveVec_.x = (moveVec_.x - (square_.props_.animate_.dx_ / 1000));
-                    moveVec_.y = (moveVec_.y - (square_.props_.animate_.dy_ / 1000));
+            else
+            {
+                if ((loc5 = ((loc24 = (loc23 = map_.gs_.gsc_.recorded)[this.recordPointer]).y - y_) * (loc24.y - y_) + (loc24.x - x_) * (loc24.x - x_)) < 0.1)
+                {
+                    loc28 = ((loc27 = this).recordPointer + 1);
+                    loc27.recordPointer = loc28;
+                    if (this.recordPointer >= loc23.length)
+                    {
+                        this.recordPointer = 0;
+                    }
+                    loc24 = loc23[this.recordPointer];
+                }
+                loc5 = Math.atan2(loc24.y - y_, loc24.x - x_);
+                moveVec_.x = loc4 * Math.cos(loc5);
+                moveVec_.y = loc4 * Math.sin(loc5);
+            }
+            if (!(square_ == null) && square_.props_.push_)
+            {
+                if (!com.company.assembleegameclient.parameters.Parameters.data_.SWNoTileMove)
+                {
+                    moveVec_.x = moveVec_.x - square_.props_.animate_.dx_ / 1000;
+                    moveVec_.y = moveVec_.y - square_.props_.animate_.dy_ / 1000;
                 }
             }
-            this.walkTo((x_ + (_arg_2 * moveVec_.x)), (y_ + (_arg_2 * moveVec_.y)));
+            this.walkTo(x_ + arg2 * moveVec_.x, y_ + arg2 * moveVec_.y);
         }
-        else {
-            if (!super.update(_arg_1, _arg_2)) {
-                return (false);
-            }
+        if (map_.player_ == this && square_.props_.maxDamage_ > 0 && square_.lastDamage_ + 500 < arg1 && !isInvincible() && (square_.obj_ == null || !square_.obj_.props_.protectFromGroundDamage_))
+        {
+            loc8 = map_.gs_.gsc_.getNextDamage(square_.props_.minDamage_, square_.props_.maxDamage_);
+            (loc9 = new Vector.<uint>()).push(com.company.assembleegameclient.util.ConditionEffect.GROUND_DAMAGE);
+            this.damage(true, loc8, loc9, hp_ < loc8, null);
+            map_.gs_.gsc_.groundDamage(arg1, x_, y_);
+            square_.lastDamage_ = arg1;
         }
-        if ((((((map_.player_ == this) && (square_.props_.maxDamage_ > 0)) && ((square_.lastDamage_ + 500) < _arg_1)) && (!(isInvincible()))) && ((square_.obj_ == null) || (!(square_.obj_.props_.protectFromGroundDamage_))))) {
-            _local_10 = map_.gs_.gsc_.getNextDamage(square_.props_.minDamage_, square_.props_.maxDamage_);
-            _local_11 = new Vector.<uint>();
-            _local_11.push(ConditionEffect.GROUND_DAMAGE);
-            this.damage(true, _local_10, _local_11, (hp_ < _local_10), null);
-            map_.gs_.gsc_.groundDamage(_arg_1, x_, y_);
-            square_.lastDamage_ = _arg_1;
-        }
-        if (Parameters.data_.autoRecon) {
-            if (this.lastreconnect <= getTimer()) {
-                if (((map_.player_ == this) && (map_.name_ == "Nexus"))) {
-                    _local_4 = int(((this.chp / this.maxHP_) * 100));
-                    if (_local_4 > 75) {
-                        if (reconRealm != null) {
+        if (com.company.assembleegameclient.parameters.Parameters.data_.autoRecon)
+        {
+            if (this.lastreconnect <= flash.utils.getTimer())
+            {
+                if (map_.player_ == this && map_.name_ == "Nexus")
+                {
+                    if ((loc2 = int(this.chp / this.maxHP_ * 100)) > 75)
+                    {
+                        if (reconRealm == null)
+                        {
+                            (loc25 = new kabam.rotmg.servers.api.Server()).setName(com.company.assembleegameclient.parameters.Parameters.data_.servName);
+                            loc25.setAddress(com.company.assembleegameclient.parameters.Parameters.data_.servAddr);
+                            loc25.setPort(2050);
+                            loc26 = new com.company.assembleegameclient.game.events.ReconnectEvent(loc25, com.company.assembleegameclient.parameters.Parameters.data_.reconGID, false, map_.gs_.gsc_.charId_, com.company.assembleegameclient.parameters.Parameters.data_.reconTime, com.company.assembleegameclient.parameters.Parameters.data_.reconKey, false);
+                            map_.gs_.dispatchEvent(loc26);
+                        }
+                        else
+                        {
                             reconRealm.charId_ = map_.gs_.gsc_.charId_;
                             map_.gs_.dispatchEvent(reconRealm);
-                        } else {
-                            _local_27 = new Server();
-                            _local_27.setName(Parameters.data_.servName);
-                            _local_27.setAddress(Parameters.data_.servAddr);
-                            _local_27.setPort(2050);
-                            _local_28 = new ReconnectEvent(_local_27, Parameters.data_.reconGID, false, map_.gs_.gsc_.charId_, Parameters.data_.reconTime, Parameters.data_.reconKey, false);
-                            map_.gs_.dispatchEvent(_local_28);
                         }
-                        this.lastreconnect = (getTimer() + 2000);
+                        this.lastreconnect = flash.utils.getTimer() + 2000;
                     }
                 }
             }
         }
-        return (true);
+        return true;
     }
 
     public function onMove():void
@@ -2830,6 +2941,7 @@ public class Player extends Character
             case eItems.Tome_of_Purification:
             case eItems.Tome_of_Rejuvenation:
             case eItems.Tome_of_Renewing:
+            case eItems.Tome_of_Pain:
                 _local_1 = true;
                 break;
         }

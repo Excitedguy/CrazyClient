@@ -219,6 +219,22 @@ public class DefaultLabelFormat
             applyTextFromat(_local_2, _arg_1);
         }
 
+        public static function popupStartsIn(arg1:io.decagames.rotmg.ui.labels.UILabel):void
+        {
+            var loc1:*=createTextFormat(24, 16728576, flash.text.TextFormatAlign.LEFT, true);
+            arg1.filters = [new flash.filters.DropShadowFilter(1, 90, 0, 1, 2, 2), new flash.filters.DropShadowFilter(0, 90, 0, 0.4, 4, 4, 1, flash.filters.BitmapFilterQuality.HIGH)];
+            applyTextFromat(loc1, arg1);
+            return;
+        }
+
+        public static function mysteryBoxStartsIn(arg1:io.decagames.rotmg.ui.labels.UILabel):void
+        {
+            var loc1:*=createTextFormat(12, 16728576, flash.text.TextFormatAlign.LEFT, true);
+            arg1.filters = [new flash.filters.DropShadowFilter(1, 90, 0, 1, 2, 2), new flash.filters.DropShadowFilter(0, 90, 0, 0.4, 0, 0, 3, flash.filters.BitmapFilterQuality.HIGH)];
+            applyTextFromat(loc1, arg1);
+            return;
+        }
+
         public static function priceButtonLabel(_arg_1:UILabel):void
         {
             var _local_2:TextFormat = new TextFormat();

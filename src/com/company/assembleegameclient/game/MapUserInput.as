@@ -361,6 +361,7 @@ public class MapUserInput
             case 8335:
             case 2667:
             case 3080:
+            case 3078:
             case 2225:
             case 2854:
             case 2645:
@@ -368,6 +369,7 @@ public class MapUserInput
             case 8610:
             case 3102:
             case 5854:
+            case 1976:
                 _arg_1.mapAutoAbil = (!(_arg_1.mapAutoAbil));
                 _arg_1.notifyPlayer(((_arg_1.mapAutoAbil) ? "Auto Ability: Enabled" : "Auto Ability: Disabled"), 0xFF00, 1500);
                 return (true);
@@ -381,6 +383,7 @@ public class MapUserInput
             case 2853:
             case 3081:
             case 8342:
+            case 579:
                 if (Parameters.data_.palaSpam)
                 {
                     _arg_1.mapAutoAbil = (!(_arg_1.mapAutoAbil));
@@ -478,7 +481,7 @@ public class MapUserInput
             this.handlePerfectAim(_arg_1);
             return (true);
         }
-        if (!((_arg_1.objectType_ == 782) || (_arg_1.objectType_ == 800)))
+        if (!(((_arg_1.objectType_ == 782) || (_arg_1.objectType_ == 800 || (_arg_1.objectType_ == 785)))))
         {
             return (false);
         }

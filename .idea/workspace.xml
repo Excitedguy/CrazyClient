@@ -1,18 +1,363 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c2ea9548-ec8c-4cf4-8d97-c4e4a0d88d3c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/PlayerToolTip.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/PlayerToolTip.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/tasks/FetchPlayerCalendarTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/tasks/FetchPlayerCalendarTask.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarDayBox.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarDayBox.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarTabButton.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarTabButton.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarTabsView.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarTabsView.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarView.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarView.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/DailyCalendarInfoIcon.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/DailyCalendarInfoIcon.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/DailyLoginModal.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/DailyLoginModal.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/DailyLoginPanel.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/DailyLoginPanel.as" />
-      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/ItemTileRenderer.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/ItemTileRenderer.as" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/game/GameSprite.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/game/GameSprite.as" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Projectile.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Projectile.as" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/eItems.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/eItems.as" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as" afterPath="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/PetsModel_petsDataXML.dat" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/PetsModel_petsDataXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBoxTag.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBoxTag.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBuyButton.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBuyButton.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopConfiguration.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopConfiguration.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopPopupMediator.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopPopupMediator.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/GenericBoxTile.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/GenericBoxTile.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/data/GenericBoxInfo.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/data/GenericBoxInfo.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/MysteryBoxTile.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/MysteryBoxTile.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/rollModal/MysteryBoxRollModalMediator.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/rollModal/MysteryBoxRollModalMediator.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/packages/PackageBoxTile.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/shop/packages/PackageBoxTile.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/defaults/DefaultLabelFormat.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/defaults/DefaultLabelFormat.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/gird/UIGrid.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/gird/UIGrid.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITab.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITab.as" />
+      <change beforePath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITabs.as" afterPath="$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITabs.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_DarknessBackground.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_DarknessBackground.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_EvolveBackground.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_EvolveBackground.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_Hanami8x8charsEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_Hanami8x8charsEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_HanamiParts8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_HanamiParts8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_SakuraEnvironment16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_SakuraEnvironment16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_SakuraEnvironment8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_SakuraEnvironment8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_StarburstSpinner.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_StarburstSpinner.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_autumnNexusObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_battleOryxObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_bigcubeEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_bigcubeEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_brokenPillarEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_brokenPillarEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_buffedBunnyChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_buffedBunnyChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_buffedBunnyObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_buffedBunnyObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_buffedBunnyObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_buffedBunnyObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyColBrokenEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyColBrokenEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyColWholeEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyColWholeEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut3Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut3Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut4Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_candyDoughnut4Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dEncounters2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dEncounters2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dEncountersEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dEncountersEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dMountains1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dMountains1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dMountains2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16dMountains2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16rEncountersEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x16rEncountersEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x8dEncountersEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x8dEncountersEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x8rEncountersEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars16x8rEncountersEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8dBeachEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8dBeachEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8dEncountersEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8dEncountersEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8dHero1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8dHero1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rBeachEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rBeachEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rEncountersEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rEncountersEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rHero1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rHero1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rHero2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rHero2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rHighEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rHighEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rLow1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rLow1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rLow2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rLow2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rMid2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rMid2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rMidEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rMidEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets1Embed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets1Embed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets1MaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets1MaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPets2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPetsKaratePenguin_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_chars8x8rPetsKaratePenguin_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cloningVatEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cloningVatEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cnidarianReefObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cnidarianReefObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cnidarianReefObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cnidarianReefObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_columnOneAndHalfEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_columnOneAndHalfEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_crateEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_crateEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cubeEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cubeEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cursorsEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_cursorsEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1Chars16x16rEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1Chars16x16rEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1Chars8x8rEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1Chars8x8rEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1LofiObjBigEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1LofiObjBigEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1LofiObjEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d1LofiObjEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2Chars16x16rEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2Chars16x16rEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2Chars8x8rEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2Chars8x8rEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2LofiObjBigEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2LofiObjBigEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2LofiObjEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2LofiObjEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2LofiObjEmbed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d2LofiObjEmbed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3Chars16x16rEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3Chars16x16rEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3Chars8x8rEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3Chars8x8rEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3LofiObjBigEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3LofiObjBigEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3LofiObjEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_d3LofiObjEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_dodecahedronEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_dodecahedronEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_epicHiveObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_gasEmitter_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_gasEmitter_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_icosahedronEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_icosahedronEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_innerMaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_innerMaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_innerP1MaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_innerP1MaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_innerP2MaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_innerP2MaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_jackoEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_jackoEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_labTankEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_labTankEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_largeMonument1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_largeMonument1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_largeMonument2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_largeMonument2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_largeMonument3Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_largeMonument3Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiChar2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiChar2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiChar2Embed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiChar2Embed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiCharBigEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiCharBigEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiCharEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiCharEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiEnvironment2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiEnvironment2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiEnvironment3Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiEnvironment3Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiEnvironmentEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiEnvironmentEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiInterface2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiInterface2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiInterfaceBigEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiInterfaceBigEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiInterfaceEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiInterfaceEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj3Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj3Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj40x40Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj40x40Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj4Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj4Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj5Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj5Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj5bEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj5bEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj6Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObj6Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObjBigEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObjBigEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObjEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiObjEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiParticlesShockerEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiParticlesShockerEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiPartsEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiPartsEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiProjsBigEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiProjsBigEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiProjsEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lofiProjsEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_lostHallsObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_magicWoodsObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank3Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank3Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank4Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_monsterTank4Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_mountainTempleObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEnd1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEnd1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEnd2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEnd2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEntry2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEntry2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEntryEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newGateEntryEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newMonument1Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newMonument1Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newMonument2Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newMonument2Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newMonument3Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_newMonument3Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_obeliskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_obeliskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_octahedronEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_octahedronEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_oryxHordeObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_outerMaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_outerMaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_parasiteDenObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_particlesEmbed.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_particlesEmbed.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_particlesEmbed.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_particlesEmbed.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petUpgrader_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petUpgrader_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petsDivineEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petsDivineEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petsDivineEmbed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_petsDivineEmbed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_pillarEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_pillarEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersMaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersMaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16Embed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16Embed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16MaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16MaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16MaskEmbed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkins16MaskEmbed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsEmbed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsEmbed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsMaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsMaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsMaskEmbed_.png" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_playersSkinsMaskEmbed_.png" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_pyramidEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_pyramidEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_redLootBagEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_redLootBagEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_santaWorkshopObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_secludedThicketObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_sidesMaskEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_sidesMaskEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_signEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_signEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_squatty3Side_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_squatty3Side_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_stPatricksObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_starsEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_starsEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusChars16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusChars16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusChars8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusChars8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusObjects16x16Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusObjects16x16Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusObjects8x8Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_summerNexusObjects8x8Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_tableEdgeEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_tableEdgeEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_tableEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_tableEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_teslaEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_teslaEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_tetrahedronEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_tetrahedronEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile10x10Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile10x10Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile4x4Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile4x4Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile5x5Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile5x5Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile9x9Embed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_textile9x9Embed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_threeSideCubeEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_threeSideCubeEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_towerEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_towerEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_twoHighWall_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_twoHighWall_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_webEmbed_.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedAssets_webEmbed_.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_AbyssOfDemonsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_AbyssOfDemonsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_AlliesCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_AlliesCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ArenaCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ArenaCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_BTestingCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_BTestingCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_BelladonnaCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_BelladonnaCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_CandyLandCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_CandyLandCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_CaveOfAThousandTreasuresCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_CaveOfAThousandTreasuresCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ContainersCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ContainersCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_DyesCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_DyesCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EncountersCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EncountersCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EpicForestMazeCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EpicForestMazeCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EpicPirateCaveCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EpicPirateCaveCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EpicSpiderDenCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EpicSpiderDenCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipEggsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipEggsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipKeysCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipKeysCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipKeysCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipKeysCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipSkinsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipSkinsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipSkinsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipSkinsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipmentSetsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipmentSetsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipmentSetsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_EquipmentSetsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ForbiddenJungleCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ForbiddenJungleCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ForestMazeCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ForestMazeCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_GhostShipCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_GhostShipCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_GroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_GroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_HauntedCemeteryCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_HauntedCemeteryCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_HeroesCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_HeroesCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_HighCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_HighCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_IceTombCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_IceTombCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_KTestingCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_KTestingCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_KTestingCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_KTestingCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LairOfDraconisCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LairOfDraconisCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LairOfShaitanCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LairOfShaitanCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LairOfShaitanCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LairOfShaitanCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LowCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_LowCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MTestingCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MTestingCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MadLabCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MadLabCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ManorOfTheImmortalsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ManorOfTheImmortalsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MidCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MidCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MiniDungeonHubCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MiniDungeonHubCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MountainsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_MountainsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_NPCsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_NPCsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_NexusDestroyedCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_NexusDestroyedCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ObjectsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ObjectsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OceanTrenchCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OceanTrenchCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxCastleCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxCastleCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxChamberCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxChamberCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxChickenChamberCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxChickenChamberCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxWineCellarCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_OryxWineCellarCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PermaFrostLordCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PermaFrostLordCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PermapetsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PermapetsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PetsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PetsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PetsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PetsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PirateCaveCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PirateCaveCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PlayersCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PlayersCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PlayersZombiesCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PlayersZombiesCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PortalsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PortalsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PortalsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PortalsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ProjectilesCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ProjectilesCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ProjectilesCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ProjectilesCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PuppetMasterCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PuppetMasterCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PuppetMasterEncoreCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_PuppetMasterEncoreCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_RegionsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_RegionsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_STestingCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_STestingCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ShattersCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ShattersCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ShoreCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ShoreCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SkinsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SkinsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SkinsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SkinsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SnakePitCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SnakePitCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SpiderDenCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SpiderDenCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SpriteWorldCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_SpriteWorldCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_StaticObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_StaticObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TTestingCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TTestingCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TestingObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TestingObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TestingObjectsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TestingObjectsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TextilesCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TextilesCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TheHiveCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TheHiveCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TokenCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TokenCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TombOfTheAncientsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TombOfTheAncientsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ToxicSewersCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_ToxicSewersCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TutorialMonstersCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TutorialMonstersCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TutorialObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TutorialObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TutorialScriptCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_TutorialScriptCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_UndeadLairCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_UndeadLairCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_WillemTestingCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_WillemTestingCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_autumnNexusGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_autumnNexusGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_autumnNexusObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_autumnNexusObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_battleOryxGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_battleOryxGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_battleOryxObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_battleOryxObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_battleOryxObjectsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_battleOryxObjectsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_buffedBunnyObjectCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_buffedBunnyObjectCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_cnidarianReefGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_cnidarianReefGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_cnidarianReefObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_cnidarianReefObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_epicHiveGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_epicHiveGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_epicHiveObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_epicHiveObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_hanaminexusGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_hanaminexusGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_hanaminexusObjectCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_hanaminexusObjectCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_iceCaveGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_iceCaveGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_iceCaveObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_iceCaveObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_lostHallsGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_lostHallsGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_lostHallsObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_lostHallsObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_magicWoodsGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_magicWoodsGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_magicWoodsObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_magicWoodsObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_mountainTempleGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_mountainTempleGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_mountainTempleObjectCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_mountainTempleObjectCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_oryxHordeGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_oryxHordeGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_oryxHordeObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_oryxHordeObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_oryxHordeObjectsCXML.dat" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_oryxHordeObjectsCXML.dat" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_parasiteDenGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_parasiteDenGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_parasiteDenObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_parasiteDenObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_santaWorkshopGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_santaWorkshopGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_santaWorkshopObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_santaWorkshopObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_secludedThicketGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_secludedThicketGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_secludedThicketObjectsCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_secludedThicketObjectsCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_stPatricksGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_stPatricksGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_stPatricksObjectCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_stPatricksObjectCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_summerNexusGroundCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_summerNexusGroundCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_summerNexusObjectCXML.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/assets/EmbeddedData_summerNexusObjectCXML.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/game/view/NewsModalButton.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/game/view/NewsModalButton.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/components/MysteryBoxRollModal.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/components/MysteryBoxRollModal.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/model/MysteryBoxInfo.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/model/MysteryBoxInfo.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/model/MysteryBoxInfo_chestImageEmbed.as" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/model/MysteryBoxInfo_chestImageEmbed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/GetMysteryBoxesTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/GetMysteryBoxesTask.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/MysteryBoxModel.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/MysteryBoxModel.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/news/model/NewsModel.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/news/model/NewsModel.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/packages/PackageConfig.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/packages/PackageConfig.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/packages/services/GetPackagesTask.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/packages/services/GetPackagesTask.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/packages/services/PackageModel.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/packages/services/PackageModel.as" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/packages/view/PackageButton.as" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/packages/view/PackageButtonMediator.as" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/kabam/rotmg/text/model/TextKey.as" afterPath="$PROJECT_DIR$/src/kabam/rotmg/text/model/TextKey.as" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,43 +368,77 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Parameters.as" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2550">
+              <caret line="81" column="85" lean-forward="false" selection-start-line="81" selection-start-column="85" selection-end-line="81" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextHandler.as" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/chat/control/TextHandler.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="349" column="28" lean-forward="false" selection-start-line="349" selection-start-column="23" selection-end-line="349" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Options.as" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="683" column="116" lean-forward="false" selection-start-line="683" selection-start-column="111" selection-end-line="683" selection-end-column="116" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>projectiles_</find>
-      <find>updateUser</find>
-      <find>updateUser(_arg_1:String, _arg_2:String, _arg_3:String)</find>
-      <find>secret</find>
-      <find>account</find>
-      <find>exposed</find>
-      <find>Crazy</find>
-      <find>temple</find>
-      <find>extraoptions</find>
-      <find>com.company.assembleegameclient.parameters.</find>
-      <find>doshoot</find>
-      <find>server.nexus</find>
-      <find>nexus</find>
-      <find>music</find>
-      <find>tooltip</find>
-      <find>beginners</find>
+      <find>mapauto</find>
+      <find>mapautoabil</find>
+      <find>mapAutoAbil</find>
+      <find>space</find>
+      <find>a</find>
+      <find>autoAbil</find>
+      <find>Auto Ability enabled</find>
+      <find>Auto Ability</find>
+      <find>Auto Ability:</find>
       <find>autoabil</find>
-      <find>dungeon</find>
-      <find>key</find>
-      <find>noti</find>
-      <find>keynoti</find>
-      <find>keyno</find>
-      <find>timerActive</find>
-      <find>timerCounter</find>
-      <find>inv</find>
-      <find>autoabi</find>
-      <find>sphere</find>
-      <find>daily</find>
-      <find>dailyclaim</find>
-      <find>claim</find>
+      <find>signal</find>
+      <find>this.data</find>
+      <find>mystery</find>
+      <find>boxback</find>
+      <find>createboxtags</find>
+      <find>createEndTime</find>
+      <find>chestim</find>
+      <find>updatestarttimestring</find>
+      <find>createendtime</find>
+      <find>updatebox</find>
+      <find>close</find>
+      <find>createpa</find>
+      <find>uig</find>
+      <find>getMysteryBoxesTask</find>
+      <find>onComplete</find>
+      <find>onRollRequestComplete</find>
+      <find>timerphase</find>
+      <find>timeractive</find>
+      <find>timer</find>
+      <find>phase</find>
     </findStrings>
     <replaceStrings>
       <replace>Cube</replace>
+      <replace>Lord of the Lost Lands</replace>
+      <replace>Parameters.data_.mapAutoAbil</replace>
+      <replace>AutoAbil</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -73,57 +452,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/mediators/InventoryGridMediator.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/itemgrids/itemtiles/InventoryTile.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/util/TileRedrawer.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/itemgrids/itemtiles/ItemTile.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/itemgrids/itemtiles/ItemTileSprite.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/itemgrids/itemtiles/ItemTileSpriteMediator.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/util/AssetLoader.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/chat/control/ParseChatMessageCommand.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/charrects/CharacterRectConstants.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/ObjectLibrary.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/core/Account.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/WebAccount.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebChangePasswordTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/ConfirmEmailModal.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/kabam/KabamAccount.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/kabam/services/KabamLoadAccountTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/steam/SteamAccount.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamRegisterAccountTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamGetCredentialsTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/TransferAccountTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRegisterAccountTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/KongregateAccount.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRelayAPILoginTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateLoginTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebChangePasswordMediatorForced.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateGetCredentialsTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediatorForced.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoginTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoadAccountTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebRegisterAccountTask.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/CheckKabamAccountTask.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as" />
-        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/skin/PetSkinRenderer.as" />
-        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/vo/SkinVO.as" />
-        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/vo/PetVO.as" />
-        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/vo/IPetVO.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/charrects/CurrentCharacterRect.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/appengine/SavedCharacter.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/appengine/SavedCharactersList.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/MyPlayerToolTip.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/dialogs/Dialog.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/board/HelpBoard.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/game/GameSprite.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/itemgrids/EquippedGrid.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" />
-        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as" />
         <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/PlayerToolTip.as" />
-        <option value="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" />
         <option value="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/tasks/FetchPlayerCalendarTask.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/core/view/MoneyFrame.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/board/HelpBoard.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/view/CalendarView.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/account/ui/Frame.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/arena/component/ArenaQueryDialogHost.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/eItems.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/text/model/TextKey.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/util/ConditionEffect.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/GameObject.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Projectile.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/ui/view/ButtonFactory.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/game/view/NewsModalButton.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/news/model/NewsModel.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/game/GameSprite.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/packages/services/PackageModel.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/packages/services/GetPackagesTask.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/packages/PackageConfig.as" />
+        <option value="$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITabs.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITab.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/ui/defaults/DefaultLabelFormat.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopConfiguration.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/MysteryBoxModel.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBoxTag.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/data/GenericBoxInfo.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/model/MysteryBoxInfo.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/account/web/commands/WebLoginCommand.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/GenericBoxTile.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/startup/control/StartupSequence.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBuyButton.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/ui/gird/UIGrid.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/packages/PackageBoxTile.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/MysteryBoxTile.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/GetMysteryBoxesTask.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopPopupMediator.as" />
+        <option value="$PROJECT_DIR$/src/kabam/rotmg/mysterybox/components/MysteryBoxRollModal.as" />
+        <option value="$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/rollModal/MysteryBoxRollModalMediator.as" />
       </list>
     </option>
   </component>
@@ -134,10 +513,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-122" />
+    <option name="y" value="232" />
+    <option name="width" value="2762" />
+    <option name="height" value="1460" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -159,6 +538,8 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,8 +551,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,6 +561,7 @@
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.18909512" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -367,6 +747,33 @@
       <workItem from="1534195880181" duration="938000" />
       <workItem from="1534216242426" duration="738000" />
       <workItem from="1534244437878" duration="407000" />
+      <workItem from="1534245591342" duration="861000" />
+      <workItem from="1534279657323" duration="897000" />
+      <workItem from="1534291397244" duration="57000" />
+      <workItem from="1534291633762" duration="66000" />
+      <workItem from="1534423730917" duration="1648000" />
+      <workItem from="1534944493064" duration="1192000" />
+      <workItem from="1534945910524" duration="624000" />
+      <workItem from="1535031350676" duration="527000" />
+      <workItem from="1535042771443" duration="1105000" />
+      <workItem from="1535044039359" duration="2633000" />
+      <workItem from="1535164338586" duration="2327000" />
+      <workItem from="1535172164401" duration="1928000" />
+      <workItem from="1535298619105" duration="1949000" />
+      <workItem from="1535310654399" duration="1156000" />
+      <workItem from="1535639340717" duration="7614000" />
+      <workItem from="1535648255067" duration="97000" />
+      <workItem from="1535750158167" duration="1008000" />
+      <workItem from="1535763553751" duration="7891000" />
+      <workItem from="1535811798836" duration="10653000" />
+      <workItem from="1535861507089" duration="1696000" />
+      <workItem from="1535913475130" duration="3021000" />
+      <workItem from="1536025160868" duration="2021000" />
+      <workItem from="1536242681219" duration="5849000" />
+      <workItem from="1536373520910" duration="4606000" />
+      <workItem from="1536380396079" duration="7141000" />
+      <workItem from="1536427171150" duration="2245000" />
+      <workItem from="1536455636868" duration="1794000" />
     </task>
     <task id="LOCAL-00001" summary="fixed nexus server connection message">
       <created>1534081945751</created>
@@ -379,70 +786,40 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83860000" />
+    <option name="totallyTimeSpent" value="156466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38026014" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23203126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3078125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50163937" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3779648" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50163937" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50163937" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38026014" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23203126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -471,370 +848,363 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/kabam/KabamAccount.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="130" column="20" lean-forward="true" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/kabam/services/KabamLoadAccountTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="57" column="25" lean-forward="false" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/steam/SteamAccount.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamGetCredentialsTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/TransferAccountTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="64" column="57" lean-forward="true" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/steam/services/SteamRegisterAccountTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRegisterAccountTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateRelayAPILoginTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateLoginTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="72" selection-end-line="42" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/KongregateAccount.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/kongregate/services/KongregateGetCredentialsTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="51" column="71" lean-forward="false" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebChangePasswordMediatorForced.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginMediatorForced.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="69" column="61" lean-forward="true" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/view/WebLoginDialog.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1499">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoginTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/WebAccount.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebLoadAccountTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="73" column="61" lean-forward="false" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/services/WebRegisterAccountTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/transfer/services/CheckKabamAccountTask.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnection.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1632">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/pets/tasks/GetOwnedPetSkinsTask.as">
+    <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="35" column="69" lean-forward="true" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+        <state relative-caret-position="471">
+          <caret line="196" column="40" lean-forward="false" selection-start-line="196" selection-start-column="40" selection-end-line="196" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/ui/UIConfig.as">
+    <entry file="file://$PROJECT_DIR$/WebMain.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="252" column="49" lean-forward="true" selection-start-line="252" selection-start-column="49" selection-end-line="252" selection-end-column="49" />
+        <state relative-caret-position="462">
+          <caret line="14" column="15" lean-forward="true" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/util/components/CountdownTimer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="61" lean-forward="false" selection-start-line="32" selection-start-column="61" selection-end-line="32" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/text/model/TextKey.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="563" column="45" lean-forward="false" selection-start-line="563" selection-start-column="40" selection-end-line="563" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/objects/GameObject.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="322" column="43" lean-forward="false" selection-start-line="322" selection-start-column="43" selection-end-line="322" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/utils/GetTimerUtil.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-242">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/components/TimerDisplay.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/util/ConditionEffect.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="124" column="4330" lean-forward="false" selection-start-line="124" selection-start-column="4323" selection-end-line="124" selection-end-column="4330" />
+        <state relative-caret-position="187">
+          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as">
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Projectile.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="788" column="22" lean-forward="true" selection-start-line="788" selection-start-column="22" selection-end-line="788" selection-end-column="22" />
+        <state relative-caret-position="187">
+          <caret line="436" column="40" lean-forward="false" selection-start-line="436" selection-start-column="40" selection-end-line="436" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/pets/components/petItem/PetItem.as">
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/ui/view/HUDView.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="85" column="23" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="85" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/game/view/GiftStatusDisplay.as">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/skin/PetSkinRenderer.as">
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/ui/view/ButtonFactory.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/vo/SkinVO.as">
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/promotions/view/SpecialOfferButton.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="48" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="459">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/vo/PetVO.as">
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/news/model/NewsModel.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+        <state relative-caret-position="831">
+          <caret line="144" column="5" lean-forward="false" selection-start-line="144" selection-start-column="5" selection-end-line="144" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/pets/data/vo/IPetVO.as">
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/game/view/NewsModalButton.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/EquipmentToolTip.as">
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/game/view/ShopDisplay.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
-          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/appengine/SavedCharacter.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="95" column="25" lean-forward="false" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/appengine/SavedCharactersList.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="118" column="44" lean-forward="false" selection-start-line="118" selection-start-column="44" selection-end-line="118" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/ui/view/CurrentCharacterRectMediator.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/screens/charrects/MyPlayerToolTipFactory.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/MyPlayerToolTip.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="75" column="27" lean-forward="false" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/screens/charrects/CurrentCharacterRect.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="161" column="9" lean-forward="false" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/board/HelpBoard.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/core/view/MoneyFrame.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/dialogs/Dialog.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/chat/control/TextHandler.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="134" column="27" lean-forward="false" selection-start-line="134" selection-start-column="27" selection-end-line="134" selection-end-column="38" />
+        <state relative-caret-position="833">
+          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/game/GameSprite.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="680" column="5" lean-forward="true" selection-start-line="680" selection-start-column="5" selection-end-line="680" selection-end-column="5" />
+        <state relative-caret-position="489">
+          <caret line="722" column="49" lean-forward="false" selection-start-line="722" selection-start-column="49" selection-end-line="722" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/account/ui/OfferRadioButton.as">
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/objects/eItems.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="120" column="46" lean-forward="true" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/account/ui/OfferRadioButtons.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/panels/itemgrids/EquippedGrid.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="1462" column="13" lean-forward="false" selection-start-line="1462" selection-start-column="13" selection-end-line="1462" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/language/service/GetLanguageService.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7166">
-          <caret line="13" column="49849" lean-forward="false" selection-start-line="13" selection-start-column="49843" selection-end-line="13" selection-end-column="49849" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="60" column="38" lean-forward="false" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="28" column="47" lean-forward="false" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/messaging/impl/GameServerConnectionConcrete.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="1518" column="57" lean-forward="true" selection-start-line="1518" selection-start-column="57" selection-end-line="1518" selection-end-column="57" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#155#221#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="471">
+          <caret line="2198" column="56" lean-forward="false" selection-start-line="2198" selection-start-column="54" selection-end-line="2198" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/objects/Player.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="1538" column="21" lean-forward="true" selection-start-line="1538" selection-start-column="21" selection-end-line="1538" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/game/MapUserInput.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="376" column="22" lean-forward="false" selection-start-line="376" selection-start-column="22" selection-end-line="376" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/packages/services/PackageModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="41" lean-forward="false" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/packages/services/GetPackagesTask.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/packages/PackageConfig.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-241">
+          <caret line="13" column="64" lean-forward="false" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/screens/CharacterSelectionAndNewsScreen.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/ui/defaults/DefaultLabelFormat.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="212" column="9" lean-forward="true" selection-start-line="212" selection-start-column="9" selection-end-line="212" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopConfiguration.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/MysteryBoxModel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBoxTag.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="746">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/account/web/commands/WebLoginCommand.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="46" lean-forward="true" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/mysterybox/model/MysteryBoxInfo.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/data/GenericBoxInfo.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/genericBox/GenericBoxTile.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="387" column="34" lean-forward="true" selection-start-line="387" selection-start-column="34" selection-end-line="387" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/lib/tasks/BaseTask.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="38" lean-forward="true" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/startup/control/StartupSequence.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITab.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/ui/tabs/UITabs.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopBuyButton.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/ui/gird/UIGrid.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopPopupView.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/MysteryBoxTile.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WebMain.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/packages/PackageBoxTile.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/mysterybox/services/GetMysteryBoxesTask.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/mysterybox/components/MysteryBoxRollModal.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="463" column="32" lean-forward="true" selection-start-line="463" selection-start-column="32" selection-end-line="463" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/ShopPopupMediator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="183" column="74" lean-forward="true" selection-start-line="183" selection-start-column="74" selection-end-line="183" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/decagames/rotmg/shop/mysteryBox/rollModal/MysteryBoxRollModalMediator.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2446">
+          <caret line="144" column="24" lean-forward="true" selection-start-line="144" selection-start-column="24" selection-end-line="144" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/options/Options.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="1090" column="26" lean-forward="false" selection-start-line="1090" selection-start-column="26" selection-end-line="1090" selection-end-column="26" />
+        <state relative-caret-position="408">
+          <caret line="683" column="116" lean-forward="false" selection-start-line="683" selection-start-column="111" selection-end-line="683" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/dailyLogin/tasks/FetchPlayerCalendarTask.as">
+    <entry file="file://$PROJECT_DIR$/src/kabam/rotmg/chat/control/TextHandler.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2482">
-          <caret line="146" column="0" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#154#186#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="349" column="28" lean-forward="false" selection-start-line="349" selection-start-column="23" selection-end-line="349" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/ui/tooltip/PlayerToolTip.as">
+    <entry file="file://$PROJECT_DIR$/src/com/company/assembleegameclient/parameters/Parameters.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="51" column="99" lean-forward="false" selection-start-line="51" selection-start-column="99" selection-end-line="51" selection-end-column="99" />
+        <state relative-caret-position="-2550">
+          <caret line="81" column="85" lean-forward="false" selection-start-line="81" selection-start-column="85" selection-end-line="81" selection-end-column="85" />
           <folding />
         </state>
       </provider>

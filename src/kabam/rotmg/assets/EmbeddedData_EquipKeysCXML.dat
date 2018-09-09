@@ -671,6 +671,24 @@
       <BagType>8</BagType>
       <Track/>
    </Object>
+   <Object type="0x551" id="Wine Cellar Short Key">
+      <Class>Equipment</Class>
+      <Item/>
+      <DisplayId>Wine Cellar Key</DisplayId>
+      <Texture>
+         <File>d3LofiObjEmbed</File>
+         <Index>0x5f</Index>
+      </Texture>
+      <SlotType>10</SlotType>
+      <Description>A key which opens an entrance to the Wine Cellar Short version. For testing purposes.\n\nKeys can only be used once you have 10 or more stars!</Description>
+      <Sound>use_key</Sound>
+      <InvUse/>
+      <Soulbound/>
+      <Activate id="Wine Cellar Portal">CreatePortal</Activate>
+      <feedPower>200</feedPower>
+      <BagType>8</BagType>
+      <Track/>
+   </Object>
    <Object type="0x377" id="Oryx Chamber Key">
       <Class>Equipment</Class>
       <Item/>
