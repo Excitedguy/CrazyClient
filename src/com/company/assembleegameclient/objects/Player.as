@@ -1457,7 +1457,11 @@ public class Player extends Character
                         this.loopStart = loc2 + 1;
                         if (loc2 == 11)
                         {
+<<<<<<< HEAD
                         }
+=======
+                        };
+>>>>>>> 0b99d611ef06705c12b96f965777905f657384b9
                     }
                     if (loc2 == 11)
                     {
@@ -1507,11 +1511,19 @@ public class Player extends Character
                 var loc28:*=((loc27 = this).timerCount + 1);
                 loc27.timerCount = loc28;
             }
+<<<<<<< HEAD
             if (this == this.map_.player_ && !this.map_.gs_.isSafeMap && com.company.assembleegameclient.parameters.Parameters.data_.autoAbil && !(this.equipment_[1] == -1) && !isSilenced())
             {
                 this.autoAbility();
             }
             if (this.mapAutoAbil && com.company.assembleegameclient.parameters.Parameters.data_.autoAbil && this.nextAutoAbil <= flash.utils.getTimer() && !com.company.assembleegameclient.parameters.Parameters.data_.blockAbil && !isSilenced())
+=======
+            if (this == this.map_.player_ && !this.map_.gs_.isSafeMap && com.company.assembleegameclient.parameters.Parameters.data_.autoAbil && !(this.equipment_[1] == -1))
+            {
+                this.autoAbility();
+            }
+            if (this.mapAutoAbil && this.nextAutoAbil <= flash.utils.getTimer() && !com.company.assembleegameclient.parameters.Parameters.data_.blockAbil)
+>>>>>>> 0b99d611ef06705c12b96f965777905f657384b9
             {
                 loc21 = 0;
                 loc22 = 1 + this.wisdom_ / 150;
@@ -1524,6 +1536,7 @@ public class Player extends Character
                     case com.company.assembleegameclient.objects.eItems.Ghastly_Drape:
                     {
                         loc21 = 6500;
+<<<<<<< HEAD
                         break;
                     }
                     case com.company.assembleegameclient.objects.eItems.Helm_of_the_Great_General:
@@ -1548,6 +1561,22 @@ public class Player extends Character
                     case com.company.assembleegameclient.objects.eItems.Marble_Seal:
                     {
                         loc21 = 5500;
+=======
+                        break;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Helm_of_the_Great_General:
+                    case com.company.assembleegameclient.objects.eItems.Golden_Helm:
+                    case com.company.assembleegameclient.objects.eItems.Pathfinders_Helm:
+                    case com.company.assembleegameclient.objects.eItems.Hivemaster_Helm:
+                    {
+                        loc21 = 7000;
+                        break;
+                    }
+                    case com.company.assembleegameclient.objects.eItems.Helm_of_the_Juggernaut:
+                    case com.company.assembleegameclient.objects.eItems.Helm_of_the_Jack_o_naut:
+                    {
+                        loc21 = 6000;
+>>>>>>> 0b99d611ef06705c12b96f965777905f657384b9
                         break;
                     }
                     case com.company.assembleegameclient.objects.eItems.Seal_of_the_Blessed_Champion:
@@ -1587,7 +1616,10 @@ public class Player extends Character
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Holy_Protection:
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Purification:
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Frigid_Protection:
+<<<<<<< HEAD
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Pain:
+=======
+>>>>>>> 0b99d611ef06705c12b96f965777905f657384b9
                     {
                         if (com.company.assembleegameclient.parameters.Parameters.data_.palaSpam)
                         {
@@ -1648,7 +1680,10 @@ public class Player extends Character
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Holy_Protection:
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Frigid_Protection:
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Rejuvenation:
+<<<<<<< HEAD
                     case com.company.assembleegameclient.objects.eItems.Tome_of_Pain:
+=======
+>>>>>>> 0b99d611ef06705c12b96f965777905f657384b9
                     {
                         loc21 = 500;
                         break;

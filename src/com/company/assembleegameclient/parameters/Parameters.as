@@ -13,8 +13,13 @@ import flash.display.StageScaleMode;
 public class Parameters
 {
 
+<<<<<<< HEAD
     public static const BUILD_VERSION:String = "X28.1";
     public static const MINOR_VERSION:String = "0";
+=======
+    public static const BUILD_VERSION:String = "X28.0";
+    public static const MINOR_VERSION:String = "4";
+>>>>>>> 0b99d611ef06705c12b96f965777905f657384b9
     public static const ENABLE_ENCRYPTION:Boolean = true;
     public static const PORT:int = 2050;
     public static const ALLOW_SCREENSHOT_MODE:Boolean = true;
